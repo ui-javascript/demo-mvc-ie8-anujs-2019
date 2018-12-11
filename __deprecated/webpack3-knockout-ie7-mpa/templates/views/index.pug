@@ -1,0 +1,59 @@
+extends ../layouts/default
+
+block content
+	.container
+		h2.display-4 KeystoneJS-KnockoutJS boilerplate
+		h5.text-muted Comes with a component system to modularly build elements that can be included like <code><a href='#MarkdownEditor'>markdown-editor</a></code>
+		
+		hr
+		.pb-2#Features
+			h4.bg-info.text-white.p-2 Features
+			.pl-0.pl-sm-4
+				.pb-4
+					h6.bg-info.text-white.p-2
+						i.fa.fa-long-arrow-right
+						| &nbsp;gulp
+					p <code>gulp</code> default task that...
+						ul
+							li starts the KeystoneJS app
+							li watches KeystoneJS app files and <strong>restarts the KeystoneJS app whenever a file changes</strong>
+							li watches <code>public/styles</code> and compiles <strong>sass</strong> on file change
+							li watches <code>public/js</code> and compiles a bundle.js file using <strong>webpack</strong>
+
+				.pb-4
+					h6.bg-info.text-white.p-2
+						i.fa.fa-long-arrow-right
+						| &nbsp;webpack
+					p <strong>webpack</strong> is called by the gulp task using <code>webpack.config.js</code> to compile one static <code>bundle.js</code> file
+
+				.pb-4
+					h6.bg-info.text-white.p-2
+						i.fa.fa-long-arrow-right
+						| &nbsp;sass
+					p <strong>gulp-sass</strong> compiles <code>public/styles/scss</code> directory to one <code>public/styles/site.css</code> file
+
+				.pb-4
+					h6.bg-info.text-white.p-2
+						i.fa.fa-long-arrow-right
+						| &nbsp;bootstrap
+					p <strong>bootstrap 4</strong> (beta) is included and is ready to go with any custom component by using <code>import 'bootstrap'</code>
+
+				.pb-4
+					h6.bg-info.text-white.p-2
+						i.fa.fa-long-arrow-right
+						| &nbsp;knockout
+					p <strong>KnockoutJS</strong> is included and is used to register components for simple modular development. No need for a .jsx editor or learning the beast that is Angular2 (I do like Angular but it is a discipline in itself)
+		.pb-2#ExampleComponents
+			h4.bg-secondary.text-white.p-2 Example Components
+			.pl-0.pl-sm-4
+				.pb-4
+					h6.bg-secondary.text-white.p-2
+						i.fa.fa-long-arrow-right
+						| &nbsp;hello-world
+					hello-world(params='hello_world: "Check out how components work in <strong><em>public/js/src/components/hello-world</em></strong><br/>If anything, you at least have a markdown editor"')
+
+				.pb-4
+					h6.bg-secondary.text-white.p-2#MarkdownEditor
+						i.fa.fa-long-arrow-right
+						| &nbsp;markdown-editor
+					markdown-editor(params='markdown: "`env: '+env+'`\\n\\n_look at `index.pug` to see how to pass data to components before sending to client_"')

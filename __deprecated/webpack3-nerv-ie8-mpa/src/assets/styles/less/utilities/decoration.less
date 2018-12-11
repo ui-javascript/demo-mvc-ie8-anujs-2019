@@ -1,0 +1,251 @@
+
+/**
+ * 盒子阴影
+ * box-shadow: 水平阴影的位置, 垂直阴影的位置, 模糊距离, 阴影的大小,
+ * 阴影的颜色, 阴影开始方向（默认是从里往外，设置inset就是从外往里）
+ */
+.box-shadow() {
+  box-shadow: 0px 14px 26px 0px rgba(0, 0, 0, 0.1);
+  //box-shadow:-1px 0px 11px #333333;
+  //box-shadow:-1px -2px 6px #33333;
+}
+
+// 边距
+.border() {
+  border: 1px solid @grey-table-border;
+}
+
+.no-border-t() {
+  border-top: none !important;
+}
+
+.no-border-b() {
+  border-bottom: none !important;
+}
+
+/**
+ * 圆角
+ */
+//
+.border-radius-left(@size: 8px) {
+  border-top-left-radius: @size;
+  border-bottom-left-radius: @size;
+}
+
+// 右侧圆角
+.border-radius-right(@size: 8px) {
+  border-top-right-radius: @size;
+  border-bottom-right-radius: @size;
+}
+
+// 鼠标 ========
+.cursor() {
+  cursor: pointer;
+}
+
+.no-cursor() {
+  cursor: none !important;
+}
+
+.no-cursor(allow) {
+  cursor: not-allowed;
+}
+
+.no-cursor(event) {
+  pointer-events: none;
+}
+
+// 文字过多后显示省略号 ========
+.txt-elli(@w: 250px) {
+  max-width: @w;
+  //display: inline-block;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// 多行文本溢出
+// 仅支持webkit
+.txt-elli-mult(@n: 3) {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: @n;
+  word-break: break-all;
+  -o-text-overflow: ellipsis;
+  -ms-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+// 两端对齐
+.txt-justify() {
+  text-align: justify;
+  text-justify: inter-ideograph;
+}
+
+// 文本选择样式
+.txt-selectarea(@bgcolor: @blue, @txtcolor: #333) {
+
+  ::selection {
+    background: @bgcolor;
+    color: @txtcolor;
+  }
+
+  ::-moz-selection {
+    background: @bgcolor;
+    color: @txtcolor;
+  }
+}
+
+.txt-noselect() {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+// 文本强调
+.txt-em() {
+  padding-left: @left-sm;
+  padding-right: @left-sm;
+  background-color: @blue;
+  color: @white;
+}
+
+// 有时，字体并不能在所有设备上都达到最佳的显示，所以可以让设备浏览器来帮助你
+.txt-smooth() {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+// 将链接变成默认的文字样式
+.link-unstyled() {
+  color: inherit;
+  cursor: inherit;
+  text-decoration: inherit;
+
+  &:active,
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+
+}
+
+// 透明度 ie8兼容
+.opacity(@opacity: 20) {
+  opacity: @opacity / 100;
+  filter: alpha(opacity=@opacity);
+}
+
+// 文字居中
+.tc {
+  text-align: center;
+}
+
+.tl {
+  text-align: left;
+}
+
+.tr {
+  text-align: right;
+}
+
+.fb {
+  font-weight: bold;
+}
+
+// 常用颜色
+.txt-red {
+  color: @red;
+}
+
+.txt-blue {
+  color: @blue;
+}
+
+.txt-black {
+  color: @black;
+}
+
+// 滚动条
+
+.scroll() {
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track,
+  ::-webkit-scrollbar-thumb {
+    border-right: 1px solid transparent;
+    border-left: 1px solid transparent;
+  }
+
+  ::-webkit-scrollbar-button:start,
+  ::-webkit-scrollbar-button:end {
+    width: 0;
+    height: 0;
+  }
+
+  ::-webkit-scrollbar-button:start:hover {
+    background-color: #eee;
+  }
+
+  ::-webkit-scrollbar-button:end {
+    background-color: #eee;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    background-color: #d9d9d9;
+    cursor: pointer;
+  }
+
+  ::-webkit-scrollbar-corner {
+    display: block;
+  }
+
+  ::-webkit-scrollbar-track:hover {
+    background-color: rgba(0, 0, 0, 0.15);
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+}
+
+// 字体
+.fs-14 {
+  font-size: 14px;
+}
+
+.fs-15 {
+  font-size: 15px;
+}
+
+.fs-16 {
+  font-size: 16px;
+}
+
+.fs-17 {
+  font-size: 17px;
+}
+
+.fs-18 {
+  font-size: 18px;
+}
+
+.fs-20 {
+  font-size: 20px;
+}
+

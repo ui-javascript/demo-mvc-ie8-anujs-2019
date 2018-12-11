@@ -1,0 +1,1151 @@
+//html,
+//body {
+//  height: 100%;
+//  //overflow-x: auto;
+//  //min-width: 1600px;
+//}
+//
+//// 公共背景
+//.commonBg {
+//  width: 100%;
+//  min-width: 1200px;
+//  height: 100%;
+//  background: url(../../../images/bg.png) no-repeat;
+//  //background: url(../../../images/bg_old_2.png) no-repeat;
+//
+//  //&__userinfo {
+//  //  position: absolute;
+//  //  right: 40px;
+//  //  top: -80px;
+//  //  cursor: pointer;
+//  //
+//  //  .size(41px);
+//  //
+//  //  background: url(../../../images/icon/userinfo.png) no-repeat;
+//  //}
+//
+//  &__plus {
+//    .sprite(@plus);
+//    position: absolute;
+//
+//    &.plus1 {
+//      right: -23px;
+//      top: -23px;
+//    }
+//
+//    &.plus2 {
+//      left: -23px;
+//      bottom: 121px;
+//    }
+//  }
+//
+//  &__container {
+//    top: 165px;
+//    left: 0;
+//    right: 0;
+//    position: absolute;
+//    width: 85%;
+//
+//
+//    // 宽度变化范围
+//    max-width: 1600px;
+//    //min-width: 1200px;
+//
+//    // 考虑IE兼容一下高度
+//    height: 839px;
+//    height: calc(~"100% - 165px");
+//    max-height: 839px;
+//
+//    // 给予最小高度，防止压扁
+//    min-height: 700px;
+//
+//    .center(auto-x);
+//    background-color: #fff;
+//
+//    //.box-shadow();
+//
+//    &.login {
+//      background: url(../../../images/login/login_bg.png) no-repeat center bottom;
+//      //background: url(../../../images/login/login_bg_old_2.png) no-repeat center bottom;
+//      //overflow: hidden;
+//      //filter: blur(1px);
+//    }
+//
+//    &.no-h-limit {
+//        height: auto;
+//        max-height: unset;
+//    }
+//
+//    &.shadow {
+//      .box-shadow();
+//    }
+//
+//    &.prompt-page {
+//      overflow-x: hidden;
+//    }
+//  }
+//
+//}
+//
+//// 考试页
+//._exam-page {
+//  .num-box {
+//    box-sizing: border-box;
+//    width: 720px;
+//    /* height: 100px; */
+//    border-radius: 5px;
+//    background-color: #fff;
+//    /* margin-top: 15px; */
+//    //margin-left: 35px;
+//    color: #fff;
+//    /* padding: 10px 15px 15px; */
+//  }
+//
+//  .circle-li {
+//    float: left;
+//    font-size: 18px;
+//    margin-left: 15px;
+//    width: 28px;
+//    height: 28px;
+//    line-height: 28px;
+//    text-align: center;
+//    cursor: pointer;
+//    margin-top: 5px;
+//    background-color: #ddd;
+//    border-radius: 14px;
+//  }
+//
+//  .activeColor {
+//    background-color: #E70012 !important;
+//  }
+//
+//  .activeOverColor {
+//    background-color: #bce8f1;
+//  }
+//
+//  .question-box {
+//    box-sizing: border-box;
+//    border-radius: 5px;
+//    background-color: #f8f8f8;
+//    margin-top: 10px;
+//    //margin-left: 35px;
+//    color: #333;
+//    padding: 10px;
+//    width: 720px;
+//    font-size: 14px;
+//    min-height: 200px;
+//  }
+//
+//  .question-box-2 {
+//    box-sizing: border-box;
+//    border-radius: 5px;
+//    background-color: #f8f8f8;
+//    margin-top: 10px;
+//    //margin-left: 35px;
+//    color: #333;
+//    padding: 10px;
+//    width: 720px;
+//    font-size: 14px;
+//
+//    min-height: 41px;
+//  }
+//
+//
+//  .hide_box {
+//    display: none;
+//  }
+//
+//  .show_box {
+//    display: block;
+//  }
+//
+//  .question {
+//    font-size: 16px;
+//    color: #333;
+//    line-height: 24px;
+//    text-indent: 30px;
+//  }
+//
+//  .answer {
+//    font-size: 16px;
+//    font-weight: bold;
+//    //margin-left: 20px;
+//    //margin-top: 15px;
+//
+//    input {
+//      border: 1px solid #ddd;
+//    }
+//  }
+//
+//  .select {
+//    font-size: 14px;
+//    color: #666;
+//    margin-top: 22px;
+//  }
+//
+//  .zjds-btn {
+//    width: 88px;
+//    height: 32px;
+//
+//    &.btn-submit {
+//      width: 136px;
+//      height: 38px;
+//      font-size: 20px;
+//      letter-spacing: 3px;
+//      text-indent: 3px;
+//      margin-left: 150px;
+//    }
+//  }
+//
+//  // 设置滚动条
+//  .js-problem-group {
+//    //max-height: 350px;
+//    //overflow: scroll;
+//    //.scroll();
+//  }
+//
+//  // 问题
+//  .question-options {
+//
+//    padding-left: 15px;
+//
+//    label {
+//      .inline-block();
+//      min-width: 100px;
+//    }
+//  }
+//}
+//
+//// 公共页脚
+//.commonFooter {
+//  color: @white;
+//  position: absolute;
+//  bottom: 20px;
+//  width: 100%;
+//
+//  &__bar {
+//    width: 100%;
+//    text-align: center;
+//    height: 30px;
+//    line-height: 30px;
+//    font-size: 14px;
+//
+//    &.wide {
+//      letter-spacing: 3px;
+//    }
+//  }
+//
+//}
+//
+//// 登录框
+//.loginForm {
+//  width: 100%;
+//  //position: relative;
+//  //position: relative;
+//  //margin-left: 50%;
+//  //margin-left: -143px;
+//  text-align: center;
+//  text-decoration: none;
+//
+//  .container {
+//    width: 1000px;
+//  }
+//
+//  // 卫星动画
+//  .orbit-system {
+//    position: relative;
+//    top: -50px;
+//    left: -120px;
+//  }
+//
+//  // 设置letter-spacing之后设置文字text-align:center不能居中
+//  // https://segmentfault.com/q/1010000003091391?_ea=300259
+//  .zjds-btn {
+//    height: @btn-height;
+//    .center(bar-y, @btn-height);
+//    letter-spacing: 8px;
+//    text-indent: 8px;
+//    .box-shadow();
+//    width: 132px;
+//  }
+//
+//  .zjds-input {
+//    .border-radius-right();
+//  }
+//
+//  .zjds-form-group {
+//    .box-shadow();
+//
+//  }
+//
+//  .form-label.password {
+//    letter-spacing: 11px;
+//  }
+//
+//  &__box {
+//    .inline-block();
+//    .container();
+//    width: 470px;
+//    position: relative;
+//    right: 200px;
+//
+//    &--group {
+//      position: relative;
+//      margin-top: 50px;
+//    }
+//  }
+//
+//  &__verify {
+//    &--code {
+//      .border-radius-right();
+//      .size(65px, 40px);
+//      cursor: pointer;
+//    }
+//  }
+//
+//  &__forget {
+//
+//    color: @black-txt;
+//    .link-unstyled();
+//    //text-decoration: none;
+//
+//    &--link {
+//      color: @zjds-blue;
+//      font-size: 16px;
+//      padding-bottom: 1px;
+//      //border-bottom: 1px solid #231815;
+//      border-bottom: 1px solid @zjds-blue;
+//      //text-decoration: underline;
+//      display: block;
+//      margin-right: 10px;
+//    }
+//
+//  }
+//
+//}
+//
+//// 系统标题与LOGO
+//.zjdsTitle {
+//
+//  width: 100%;
+//  margin-top: 160px;
+//
+//  &__bar {
+//    .container();
+//    width: 1000px;
+//
+//    text-align: left;
+//    color: @zjds-blue;
+//
+//    &--zh {
+//      font-size: 70/16em;
+//      font-weight: bold;
+//
+//    }
+//
+//    &--en {
+//      font-size: 25/16em;
+//    }
+//  }
+//
+//}
+//
+//// 系统标题与LOGO
+//.zjdsHeader {
+//
+//  width: 100%;
+//  //margin-top: 115px;
+//
+//  &__bar {
+//    .container();
+//    width: 800px;
+//    text-align: left;
+//    //color: @zjds-blue;
+//
+//    &--zh {
+//      font-size: 56px;
+//      font-weight: bold;
+//    }
+//
+//    &--en {
+//      font-size: 17px;
+//    }
+//
+//  }
+//
+//}
+//
+//.countDown {
+//  width: 800px;
+//  .container();
+//  z-index: 100;
+//
+//  //left: 0;
+//  //right: 0;
+//}
+//
+//// 倒计时提示
+//.countdownTip {
+//
+//  //.container();
+//
+//  //margin-left: 100px;
+//
+//  &__tag {
+//    //font-size: 20px;
+//    //font-weight: bold;
+//    ////background: url(../../../images/icon/tag.png) no-repeat;
+//    //width: 470px;
+//    //height: 37px;
+//
+//    //.icon-tag;
+//    .sprite(@tag);
+//
+//    //.center(bar-y, 37px);
+//    //padding-left: 45px;
+//    //z-index: 200;
+//
+//  }
+//
+//  &__title {
+//    font-size: 20px;
+//    font-weight: bold;
+//    //background: url(../../../images/icon/tag.png) no-repeat;
+//    width: 470px;
+//    height: 37px;
+//
+//    //.icon-tag;
+//    //.sprite(@tag);
+//    //.center(bar-y, 37px);
+//    padding-left: 10px;
+//    //z-index: 200;
+//
+//  }
+//
+//  &__content {
+//    box-sizing: border-box;
+//    width: 480px;
+//    //height: 130px;
+//    background: @zjds-grey-content;
+//    margin-left: 35px;
+//    margin-top: 25px;
+//    padding: 5px;
+//    z-index: 200;
+//    //text-justify: kashida;
+//    text-align:justify;
+//
+//    &.indent {
+//      text-indent: 30px;
+//    }
+//
+//    &--index {
+//      width: 20px;
+//    }
+//
+//    &--item {
+//      width: 450px;
+//    }
+//  }
+//
+//}
+//
+//// 倒计时钟
+//.countdownClock {
+//
+//  position: relative;
+//  //width:285px;
+//  overflow-x: visible;
+//
+//  &__tip {
+//    font-size: 25px;
+//    font-weight: bold;
+//    text-align: right;
+//
+//    &--day {
+//      font-weight: bold;
+//      font-size: 40px;
+//      color: @zjds-red;
+//      .mlr(5px);
+//    }
+//    //z-index: 200;
+//
+//  }
+//
+//  &__start {
+//    .square(125px);
+//    //background: url(../../../images/icon/start.png) center center no-repeat;
+//    //background-size: 125px 125px;
+//
+//    //.icon-start;
+//    .sprite(@start);
+//
+//    color: white;
+//    text-align: center;
+//    position: absolute;
+//    right: 45px;
+//    cursor: pointer;
+//    margin-top: 10px;
+//    //z-index: 200;
+//
+//
+//  }
+//
+//  &__txt {
+//    margin-top: 35px;
+//    height: 50px;
+//    line-height: 25px;
+//    //z-index: 200;
+//  }
+//
+//  &__mountain {
+//    //z-index: 150;
+//    position: absolute;
+//    left: 0px;
+//    top: 185px;
+//    width: 580px;
+//    height: 248px;
+//
+//    background: url(../../../images/bg_mountain.png) no-repeat;
+//
+//  }
+//
+//}
+//
+//// 考试页公共页头
+//.examHeader {
+//
+//  margin-top: 25px;
+//
+//  &__tip {
+//
+//    .center(bar-y, 20px);
+//    text-align: center;
+//    letter-spacing: 3px;
+//  }
+//
+//  &__clock {
+//    .size(189px, 87px);
+//    //background: url(../../../images/icon/clock.png) no-repeat;
+//    //.icon-clock;
+//    .sprite(@clock);
+//    .center(bar-y, 87px);
+//    text-align: center;
+//    //.box-shadow();
+//    color: #474747;
+//
+//    font-family: 'digital-7';
+//
+//    .digital-number {
+//      width: 34px;
+//      font-size: 48px;
+//      font-family: 'digital-7';
+//      display: inline-block;
+//
+//      s,
+//      strong {
+//        font-family: 'digital-7';
+//      }
+//
+//    }
+//
+//    .digital-colon {
+//      font-size: 48px;
+//      font-family: 'digital-7';
+//
+//    }
+//
+//    &--tip {
+//      font-size: 12px;
+//      margin-top: -95px;
+//      color: #474747;
+//      margin-left: 10px;
+//      font-family: none;
+//
+//      span {
+//        margin-left: 23px;
+//
+//        &:first-child {
+//          margin-left: 0px;
+//        }
+//      }
+//    }
+//
+//
+//  }
+//
+//  &__bar {
+//
+//    &--zh {
+//      font-weight: bold;
+//      font-size: 50px;
+//    }
+//
+//    &--en {
+//      font-size: 18px;
+//      font-weight: 500;
+//    }
+//
+//  }
+//
+//}
+//
+//// 题目类型
+//.problemType {
+//  width: 190px;
+//  border-right: 1px solid @zjds-grey-content;
+//
+//  &__tab {
+//    box-sizing: border-box;
+//    .center(bar-y, 82px);
+//    .inline-block();
+//    //text-align: left;
+//    padding-left: 30px;
+//    .size(190px, 82px);
+//
+//    .link-unstyled();
+//    cursor: pointer;
+//
+//    &.hover {
+//      color: white;
+//      //background: url(../../../images/icon/tab_red.png) no-repeat;
+//      //.icon-tab_red;
+//      .sprite(@tab-red);
+//    }
+//
+//    &--type {
+//      font-size: 18px;
+//    }
+//  }
+//}
+//
+//// 注册页头
+//.registerHeader {
+//
+//  width: 100%;
+//  margin-top: 30px;
+//
+//  &__bar {
+//    text-align: center;
+//    width: 100%;
+//    font-size: 70px;
+//
+//    //color: @zjds-grey-title;
+//    color: @black;
+//    font-weight: bold;
+//    //.center();
+//    //.center(auto-x);
+//
+//  }
+//
+//}
+//
+//// 数据分析页
+//.analyseHeader {
+//
+//  width: 100%;
+//  margin-top: 60px;
+//
+//  &__bar {
+//    text-align: center;
+//    width: 100%;
+//    font-size: 70px;
+//
+//    //color: @zjds-grey-title;
+//    color: @black;
+//    font-weight: bold;
+//    //.center();
+//    //.center(auto-x);
+//
+//  }
+//
+//}
+//
+//
+//
+//// 注册表单
+//.registerBox {
+//  width: 816px;
+//  height: 472px;
+//  border-radius: 8px;
+//  border: 1px solid @grey-light;
+//  .box-shadow();
+//  background: @zjds-grey-register-box;
+//
+//  .fr {
+//    float: right;
+//  }
+//
+//  .zjds-select {
+//    font-size: 14px;
+//    background-color: #fff;
+//  }
+//
+//  .zjds-o-input {
+//    //height: none;
+//    line-height: 12px;
+//    font-size: 14px;
+//
+//    &.building {
+//      padding-left: 40px;
+//    }
+//  }
+//
+//  .zjds-btn {
+//    //.size(100px, 30px);
+//    height: 48px;
+//    font-size: 14px;
+//
+//    &.verify-btn {
+//      height: 24px;
+//      font-size: 12px;
+//
+//      // IE9及以下无法改变字体颜色
+//      // http://www.qdxw.net/xwhtml/423.html
+//      //&[disabled],
+//      //&:disabled {
+//      //  color: yellow;
+//      //}
+//    }
+//
+//    &.submit-btn {
+//      width: 130px;
+//      height: 38px;
+//      font-size: 18px;
+//      letter-spacing: 10px;
+//      text-indent: 10px;
+//    }
+//
+//  }
+//
+//  &__building {
+//    position: absolute;
+//    left: 5px;
+//    color: #474747;
+//  }
+//
+//  &__form {
+//    box-sizing: border-box;
+//    width: 494px;
+//    //padding: 60px 35px 25px 35px;
+//    padding: 40px 35px 25px 35px;
+//
+//    label {
+//      .center(bar-y, 24px);
+//      font-weight: bold;
+//      font-size: 15px;
+//    }
+//
+//  }
+//
+//  &__bg {
+//    width: 322px;
+//    height: 472px;
+//    background: url(../../../images/register_bg.png) no-repeat;
+//  }
+//
+//  &__tip {
+//    font-size: 14px;
+//    font-weight: bold;
+//  }
+//
+//}
+//
+//// 个人中心
+//.userInfo {
+//
+//  //width: 750px;
+//  padding: 0 20px 20px 20px;
+//
+//  .zjds-btn {
+//    //.size(80px, 30px);
+//    font-size: 14px;
+//  }
+//
+//  .zjds-o-input {
+//    &.building {
+//      padding-left: 40px;
+//    }
+//  }
+//
+//  select,
+//  input {
+//    background-color: @grey-light;
+//  }
+//
+//  label.form-label {
+//    font-size: 16px;
+//    font-weight: bold;
+//  }
+//
+//  &__building {
+//    position: absolute;
+//    left: 5px;
+//    color: #474747;
+//  }
+//
+//  &__title {
+//    width: 100%;
+//    text-align: center;
+//    font-size: 35px;
+//    height: 50px;
+//    line-height: 50px;
+//  }
+//
+//  &__icon {
+//    .size(70px, 70px);
+//    margin-left: 65px;
+//    //background: url(../../../images/icon/member.png) no-repeat;
+//    //.icon-member;
+//    .sprite(@member);
+//  }
+//
+//  &__tab {
+//
+//    height: 300px;
+//    width: 190px;
+//    margin-top: 20px;
+//    border-right: 1px solid @grey;
+//
+//    &--item {
+//      box-sizing: border-box;
+//      .center(bar-y, 82px);
+//      .inline-block();
+//      //text-align: left;
+//      padding-left: 30px;
+//      .size(190px, 82px);
+//
+//      .link-unstyled();
+//      cursor: pointer;
+//
+//      &.hover {
+//        color: white;
+//        //background: url(../../../images/icon/tab_red.png) no-repeat;
+//        //.icon-tab_red;
+//        .sprite(@tab-red);
+//      }
+//
+//    }
+//
+//  }
+//
+//  &__main {
+//    margin-top: 10px;
+//  }
+//
+//  &__content {
+//    width: 520px;
+//    padding: 10px;
+//
+//    &--panel {
+//      //width: 100%;
+//      display: none;
+//
+//      &.hover {
+//        display: block;
+//      }
+//
+//    }
+//
+//    // 调整标签高度
+//    > label {
+//      height: 24px;
+//      line-height: 24px;
+//    }
+//
+//    > input {
+//      border: 1px solid #ddd;
+//    }
+//
+//  }
+//
+//  .zjds-btn.btn-submit {
+//    width: 100px;
+//    height: 38px;
+//    font-size: 16px;
+//  }
+//
+//  .grade-list {
+//    min-height: 100px;
+//
+//    .tip {
+//      width: 100%;
+//      text-align: center;
+//    }
+//  }
+//
+//}
+//
+//// 考试提醒(未答题、考试成绩等)
+//.examTip {
+//  box-sizing: border-box;
+//  width: 100%;
+//  text-align: center;
+//  padding: 20px 20px 40px 20px;
+//  font-size: 20px;
+//
+//  &__result {
+//    color: @zjds-red;
+//    font-style: italic;
+//  }
+//
+//  .btn-group {
+//    text-align: center;
+//  }
+//
+//  .zjds-btn {
+//    width: 90px;
+//    height: 32px;
+//  }
+//
+//  .red-grade {
+//    font-size: 70px;
+//    color: @zjds-red;
+//  }
+//
+//  .black-grade {
+//    font-size: 70px;
+//  }
+//
+//}
+//
+//// 统计分析
+//.countAnalyse {
+//
+//  width: 830px;
+//
+//  &__section {
+//    text-align: center;
+//    margin-top: 100px;
+//    //font-size: 14px;
+//  }
+//
+//  // 人数统计
+//  &__people {
+//
+//      margin-top: 50px;
+//    &--num {
+//      //display: block;
+//      .inline-block();
+//      font-size: 40px;
+//      color: @zjds-red;
+//      //padding: 0 30px;
+//      min-width: 130px;
+//    }
+//
+//  }
+//
+//  // 占比
+//  &__proportion {
+//    margin-top: 30px;
+//
+//    &--item {
+//      width: 33%;
+//    }
+//  }
+//
+//  // 地区统计
+//  &__area {
+//    //margin-top: 30px;
+//
+//  }
+//
+//  // 成绩
+//  &__grade {
+//    margin-top: 30px;
+//
+//  }
+//
+//  // 成绩前10
+//  &__top10 {
+//    margin-top: 30px;
+//
+//  }
+//
+//  // 参赛年龄
+//  &__oldest {
+//    margin-top: 30px;
+//
+//  }
+//
+//}
+//
+//// 打印证书
+//
+//.certificatePrint {
+//
+//  //box-sizing: border-box;
+//  font-size: 15px;
+//  padding: 10px 0;
+//
+//  .zjds-btn {
+//    //width: 74px;
+//    height: 32px;
+//  }
+//
+//  .btn-group {
+//    width: 100%;
+//    text-align: center;
+//  }
+//
+//  &__paper {
+//    position: relative;
+//    .size(585px, 404px);
+//    background: url(../../../images/certificate_preview.png) no-repeat;
+//    background-size: cover;
+//  }
+//
+//  // 造价师姓名
+//  &__name {
+//    position: absolute;
+//    top: 142px;
+//    left: 209px;
+//  }
+//
+//  // 造价师编号
+//  &__engineer {
+//    position: absolute;
+//    top: 142px;
+//    left: 348px;
+//  }
+//
+//  // 大赛名
+//  &__competition {
+//    position: absolute;
+//    top: 177px;
+//    left: 80px;
+//  }
+//
+//  // 学年
+//  &__year {
+//    position: absolute;
+//    top: 180px;
+//    left: 390px;
+//  }
+//
+//  // 学时
+//  &__hour {
+//    position: absolute;
+//    top: 216px;
+//    left: 145px;
+//  }
+//
+//  // 签发日期
+//  &__date {
+//    position: absolute;
+//    top: 260px;
+//    left: 179px;
+//  }
+//
+//  // 编号
+//  &__no {
+//    position: absolute;
+//    top: 326px;
+//    left: 100px;
+//    font-size: 13px;
+//  }
+//
+//}
+//
+//// 重置手机号
+//.resetTel {
+//  padding: 20px;
+//
+//  .zjds-btn {
+//    //.size(100px, 30px);
+//    font-size: 14px;
+//  }
+//
+//}
+//
+//// 打印确认
+//.printConfirm {
+//  box-sizing: border-box;
+//  padding: 10px;
+//
+//  &__tip {
+//    text-align: center;
+//  }
+//}
+//
+//// 密码重置
+//.resetPassword {
+//
+//  .zjds-o-input {
+//    height: 30px;
+//    line-height: 30px;
+//    width: 200px;
+//  }
+//
+//}
+//
+//// 考试提示页
+//.promptPage {
+//
+//  width: 100%;
+//
+//  &__container {
+//    width: 94%;
+//    max-width: 1600px;
+//    height: 42px;
+//    position: relative;
+//    .container();
+//
+//    &--userinfo {
+//      position: absolute;
+//      right: 40px;
+//      top: 55px;
+//
+//      cursor: pointer;
+//      .size(41px);
+//      //background: url(../../../images/icon/userinfo.png) no-repeat;
+//      //.icon-member;
+//      .sprite(@member);
+//    }
+//  }
+//
+//
+//}
+//
+//// 答题页
+//.examPaper {
+//  width: 1000px;
+//
+//  &__footer {
+//
+//  }
+//}
+//
+//// 用户中心
+//// 提取出来
+//.userCenter {
+//  width: 100%;
+//  position: absolute;
+//  top: 55px;
+//
+//  .container {
+//    width: 1200px;
+//  }
+//
+//  &__operate {
+//    width: 100px;
+//  }
+//
+//  &__info {
+//    cursor: pointer;
+//    .size(41px);
+//    //background: url(../../../images/icon/userinfo.png) no-repeat;
+//    //.icon-userinfo;
+//    .sprite(@userinfo)
+//
+//  }
+//
+//  &__exit {
+//    cursor: pointer;
+//    .square(31px);
+//    //background: url(../../../images/icon/exit.png) no-repeat;
+//    //.icon-exit;
+//    .sprite(@exit);
+//    //background-size: contain;
+//    margin-top: 5px;
+//  }
+//}

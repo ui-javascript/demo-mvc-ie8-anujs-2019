@@ -1,0 +1,52 @@
+/**
+ * 按钮
+ *
+ * ========================
+ */
+
+// 按钮组
+.btn-group {
+  //.mt(md);
+  margin-top: 16px;
+
+  button {
+    //.ml();
+
+    &:first-child {
+      //.no-ml();
+    }
+  }
+}
+
+.btn() {
+  box-sizing: border-box;
+  .inline-block();
+  //display: block;
+  outline: none;
+  //border: 1px solid @grey-light;
+  border: none;
+  text-align: center;
+  cursor: pointer;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.btn-box {
+  button:first-child,
+  button.first {
+    border-radius: 8px 0 0 8px;
+
+  }
+
+  input:last-child,
+  input.last {
+    border-radius: 0 8px 8px 0;
+  }
+}

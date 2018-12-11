@@ -1,0 +1,271 @@
+html {
+  height: 100%;
+}
+
+body {
+  background: #ececec;
+  height: 100%;
+  overflow-x: hidden;
+  min-width: 1190px;
+}
+
+#header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  padding: 8px 0;
+  background-color: rgba(255, 255, 255, .4);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .25);
+  transition: background-color 0.3s ease-in-out;
+  z-index: 9999;
+  border-collapse: separate;
+  zoom: 1;
+}
+
+#footer {
+  text-align: center;
+  margin-top: -60px; /* 等于footer的高度 */
+  padding: 15px 0;
+  background-color: #324057;
+  line-height: 20px;
+  a {
+    color: #fff;
+  }
+}
+
+.page-container {
+  background-color: #fff;
+  padding-top: 74px;
+  padding-bottom: 60px;
+  min-height: 100%;
+}
+
+.jumbotron {
+  background-color: #fff;
+}
+
+@media (max-width: 1140px) {
+  .container,
+  .page-container {
+    width: 100%;
+  }
+}
+
+.ui-view-container {
+  position: relative;
+}
+
+//[ui-view].ng-enter,
+//[ui-view].ng-leave {
+//  position: absolute;
+//  left: 0;
+//  right: 0;
+//  top:0;
+//  -webkit-transition: all .5s ease-in-out;
+//  -moz-transition: all .5s ease-in-out;
+//  -o-transition: all .5s ease-in-out;
+//  transition: all .5s ease-in-out;
+//}
+//
+//[ui-view].ng-enter {
+//  //opacity: 0;
+//  -webkit-transform: scale(0.5, 0.5);
+//  -moz-transform: scale(0.5, 0.5);
+//  transform: scale(0.5, 0.5);
+//}
+//
+//[ui-view].ng-enter-active {
+//  //opacity: 1;
+//  -webkit-transform: scale(1, 1);
+//  -moz-transform: scale(1, 1);
+//  transform: scale(1, 1);
+//}
+//
+//[ui-view].ng-leave {
+//  display: none;
+//  //opacity: 1;
+//  //-webkit-transform: translate(0, 0);
+//  //-moz-transform: translate(0, 0);
+//  // transform:translate3d(0, 0, 0);
+//}
+//
+//[ui-view].ng-leave-active {
+//  //opacity: 0;
+//  //-webkit-transform: translate(100px, 0);
+//  //-moz-transform: translate(100px, 0);
+//  //transform: translate(100px, 0);
+//}
+
+.flex-middle {
+  display: flex;
+  align-items: center;
+}
+
+//  边距和填充
+.m-t-xs {
+  margin-top: 3px;
+}
+
+.m-t-sm {
+  margin-top: 6px;
+}
+
+.m-t-md {
+  margin-top: 8px;
+}
+
+.m-t-lg {
+  margin-top: 15px;
+}
+
+.m-b-lg {
+  margin-bottom: 15px;
+}
+
+.p-t-sm {
+  padding-top: 6px;
+}
+
+.text-overflow {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.highlights li {
+  margin-top: 20px;
+}
+
+.highlights .entry-img {
+  display: block;
+}
+
+.highlights .entry-img img {
+  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+}
+
+// 登录表单
+.login-from {
+  background: #fff;
+  width: 600px;
+}
+
+@media only screen and (max-width: 992px) and (min-width: 0) {
+  .metismenu {
+    float: none;
+    width: auto;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #e9e9e9;
+    border-right: 0;
+    margin-bottom: 30px;
+  }
+}
+
+/* 导航 */
+.navbar-static-side {
+  margin-bottom: 20px;
+  .metismenu {
+
+    a {
+      color: #a7b1c2;
+      padding-left: 48px;
+
+      &:hover {
+        color: #108ee9;
+        background-color: transparent;
+      }
+
+      &.active {
+        color: #108ee9;
+        background-color: #ecf6fd;
+        border-right: 2px solid #108ee9;
+      }
+    }
+  }
+}
+
+.markdown {
+  font-size: 14px;
+  color: rgba(0, 0, 0, .65);
+  h2 {
+    font-size: 28px;
+    color: rgba(0, 0, 0, .85);
+    margin-bottom: 24px;
+    line-height: 40px;
+    margin-top: 8px;
+  }
+
+  p {
+    margin: 1em 0;
+  }
+}
+
+/* ibox 通用box*/
+.ibox {
+  margin-bottom: 25px;
+  margin-top: 0;
+  clear: both;
+  padding: 0;
+}
+
+.ibox-title {
+  padding: 14px 15px 7px;
+  border-color: #e7eaec;
+  border-style: solid solid none;
+  border-width: 4px 1px 1px;
+  min-height: 48px;
+  background-color: #fff;
+}
+
+.ibox-title h5 {
+  float: left;
+  margin: 0;
+  font-size: 14px;
+  text-overflow: ellipsis;
+  font-weight: 600;
+}
+
+.ibox-tools {
+  float: right;
+}
+
+.ibox-tools a {
+  color: #c4c4c4;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.ibox-tools a.btn-primary {
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .ibox-tools {
+    float: none;
+    text-align: right;
+    display: block;
+  }
+}
+
+.ibox-content {
+  background-color: #fff;
+  color: inherit;
+  border: 1px solid #e7eaec;
+  padding: 15px 20px 20px 20px;
+  clear: both;
+}
+
+.ibox-content h1,
+.ibox-content h2,
+.ibox-content h3,
+.ibox-content h4,
+.ibox-content h5 {
+  margin-top: 5px;
+  /*font-weight: 300;*/
+}
+
+.breadcrumb {
+  background-color: #fff;
+}
+

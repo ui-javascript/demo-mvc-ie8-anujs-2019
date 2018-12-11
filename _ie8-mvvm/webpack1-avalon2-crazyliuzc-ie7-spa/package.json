@@ -1,0 +1,40 @@
+{
+  "name": "webpack-avalon2-SPA-seed",
+  "version": "1.0.0",
+  "description": "webpack-avalon2 尝试加入avalon官网演示的路由",
+  "main": "",
+  "scripts": {
+    "install:cnpm": "cnpm install",
+    "remove": "rimraf node_modules",
+    "clean-build": "node npm-scripts/del-build.script.js",
+    "clean-node_modules": "node npm-scripts/del-node_modules.script.js",
+    "build": "node npm-scripts/del-build.script.js && webpack  --profile --progress --colors --display-error-details",
+    "build:dev": "node npm-scripts/del-build.script.js && webpack  --display-modules --profile --progress --colors --display-error-details",
+    "dev:hrm": "node npm-scripts/del-build.script.js && webpack-dev-server"
+  },
+  "dependencies": {
+    "webpack": "^1.13.1"
+  },
+  "devDependencies": {
+    "es6-promise": "^4.1.0",
+    "css-loader": "^0.23.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "glob": "^7.0.5",
+    "html-loader": "^0.4.3",
+    "html-webpack-plugin": "^2.17.0",
+    "file-loader": "^0.9.0",
+    "postcss-loader": "^0.9.1",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "rimraf": "^2.5.4",
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1",
+    "webpack-merge": "^0.14.0"
+  },
+  "config": {
+    "devHost": "localhost",
+    "devPort": 9527,
+    "devApi": "",
+    "devPic": ""
+  }
+}

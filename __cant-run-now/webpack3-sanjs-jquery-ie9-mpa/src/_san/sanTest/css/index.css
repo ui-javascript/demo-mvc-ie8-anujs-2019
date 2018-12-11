@@ -1,0 +1,12 @@
+body {
+    background: #000;
+    color: #fff;
+}
+
+h1 {
+    color: red;
+}
+
+:local .hello {
+    color: yellow;
+}

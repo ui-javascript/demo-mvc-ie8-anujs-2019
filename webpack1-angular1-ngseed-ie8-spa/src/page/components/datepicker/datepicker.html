@@ -1,0 +1,26 @@
+<div class="col-md-24">
+  <h1>Datepicker <span class="small">日期选择器</span></h1>
+
+  <section class="markdown">
+    <p>使用的是ui-bootstrap中的日期选择</p>
+  </section>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="ibox">
+        <header class="ibox-title">
+          <h5>日期选择</h5>
+        </header>
+
+        <div class="ibox-content">
+          <p class="input-group">
+            <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" min-date="minDate" max-date="'2019-06-22'" datepicker-options="dateOptions" close-text="Close" />
+            <span class="input-group-btn">
+              <button type="button" class="jm-btn jm-btn-default" ng-click="open($event)"><i class="jm-icon jm-icon-play"></i></button>
+            </span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

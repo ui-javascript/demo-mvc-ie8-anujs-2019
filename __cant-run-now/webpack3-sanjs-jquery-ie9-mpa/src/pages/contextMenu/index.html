@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1'>
+    <title>右键菜单</title>
+
+
+    <style>
+        body {
+            background: #494A5F;
+            color: #D5D6E2;
+            font-weight: 500;
+            font-size: 1.05em;
+            font-family: "Microsoft YaHei", "宋体", "Segoe UI", "Lucida Grande", Helvetica, Arial, sans-serif, FreeSans, Arimo;
+        }
+
+        a {
+            color: rgba(255, 255, 255, 0.6);
+            outline: none;
+            text-decoration: none;
+            -webkit-transition: 0.2s;
+            transition: 0.2s;
+        }
+
+        a:hover, a:focus {
+            color: #74777b;
+            text-decoration: none;
+        }
+
+        .c2c-dropdown {
+        }
+
+        .c2c-dropdown {
+            display: block;
+            z-index: 10000;
+            border-radius: 7px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+            cursor: auto;
+            color: #000;
+            background-color: #fff;
+            display: none;
+            position: absolute;
+            min-width: 160px;
+            margin: 0;
+            padding: 0
+        }
+
+        .c2c-dropdown a {
+            padding: 6px 16px;
+            display: block;
+            text-decoration: none;
+            color: #000000;
+            font-size: 14px;
+        }
+
+        .c2c-dropdown a:hover {
+            background-color: #ccc
+        }
+
+        .c2c-border {
+            border: 1px solid #ccc !important
+        }
+
+        .contextMenu {
+            position: absolute;
+            display: none;
+            z-index: 10000;
+        }
+
+        .contextTitle {
+            padding: 6px 16px;
+            font-weight: bold;
+            color: #5E5E5E;
+        }
+
+        .box1 {
+            width: 200px;
+            height: 300px;
+            margin: 15px;
+            display: inline-block;
+            border-radius: 5px;
+            text-align: left;
+            vertical-align: middle;
+            padding: 20px;
+            color: #fff;
+        }
+
+        .box2 {
+            width: 600px;
+            min-height: 300px;
+            margin: 15px;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            border-radius: 5px;
+            text-align: left;
+            vertical-align: middle;
+            padding: 20px;
+            color: #fff;
+        }
+
+        .centralBox {
+            text-align: center;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .codeFont {
+            color: #DAE8E8;
+        }
+
+        .heightMainBox {
+            height: 200px;
+        }
+
+        .mainimg {
+            width: 100px;
+            display: inline-block;
+            transition: all .5s;
+            top: 0;
+            vertical-align: top;
+        }
+
+        .mainimg:hover {
+            width: 150px;
+            transition: all .2s;
+        }
+    </style>
+</head>
+
+<body>
+
+
+<div class="zzsc-container">
+    <div class="container">
+        <div class='centralBox'>
+            <div class='class1 box1' style='background: #0FA3B1;'>
+                <h4>A</h4> This is a demo
+                <br> Just need to include the files:
+                <ul>
+                    <li>class2context.js</li>
+                    <li>class2context.css</li>
+                </ul>
+            </div>
+            <div class='class2 box1' style='background: #FF9B42;'>
+                <h4>Get started!</h4> Right click over me!
+                <div class='classSub2 box1' style='background: #5797CC; width: 130px; height: 180px!important;'>
+                    element inside element with diferent class
+                </div>
+            </div>
+            <div class='class3 box1' style='background: #8BC34A;'>
+                <h4>Use</h4> when html is charged, call the function
+            </div>
+            <div class='class4 box2' style='background: #9375A3;'>
+                <h4>Use</h4> when html is charged, call the function:<br>
+                <div class='codeFont'>
+                    <b>class2context</b>(
+                    <br> 'className',
+                    <br> "title",
+                    <br> [["option1", "functionoption1()"], ["option 2","functionoption2()"]]
+                    <br>);
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    //creates the div where the context menus will place
+    document.body.innerHTML += "<div id='contextMenus'></div>";
+
+    function class2context(classgiv, title, options) {
+        classgiv = JSON.parse(JSON.stringify(classgiv));
+        if (document.getElementById("context" + classgiv)) {
+            //toastr.success("alreadyExist");
+        } else {
+            var aux = "";
+            aux += "<div id='context" + classgiv + "' class='contextMenu'>";
+            aux += "  <ul class='c2c-dropdown c2c-border' style='display:block;position:static;margin-bottom:5px;'>";
+            aux += "<div class='contextTitle'>" + title + "</div>";
+            for (var i = 0; i < options.length; i++) {
+                //aux+="    <a onmousedown='"+options[i][1]+";' href='javascript:void(0);'>"+options[i][0]+"</a>";
+                aux += "    <a onmousedown='" + options[i][1] + "; ContextMenus();' href='javascript:void(0);'>" + options[i][0] + "</a>";
+
+            }
+            aux += "  </ul>";
+            aux += "</div>";
+            document.getElementById('contextMenus').innerHTML += aux; //adds the div context menu into the context menus div place
+        }
+
+        for (var i = 0; i < document.getElementsByClassName(classgiv).length; i++) {
+            classgiv = JSON.parse(JSON.stringify(classgiv));
+            //toastr.info(document.getElementsByClassName(classgiv)[i].oncontextmenu);
+            document.getElementsByClassName(classgiv)[i].addEventListener("contextmenu", function (e) {
+                // Avoid the real one
+                e.preventDefault();
+                e.stopPropagation();
+                setTimeout(function () {
+                    //classaux=this.className.split(" ")[0];
+                    document.getElementById('context' + classgiv).style.display = 'block';
+                    document.getElementById('context' + classgiv).style.left = e.pageX + "px";
+                    document.getElementById('context' + classgiv).style.top = e.pageY + "px";
+                }, 150);
+            });
+
+            /*document.getElementsByClassName(classgiv)[i].oncontextmenu+= function(e){
+                // Avoid the real one
+                e.preventDefault();
+                setTimeout(function(){
+                    //classaux=this.className.split(" ")[0];
+                    document.getElementById('context'+classgiv).style.display='block';
+                    document.getElementById('context'+classgiv).style.left=e.pageX + "px";
+                    document.getElementById('context'+classgiv).style.top=e.pageY + "px";
+                }, 150);
+            };*/
+        }
+
+        document.body.addEventListener("mousedown", function (e) {
+            // Avoid the real one
+            //e.preventDefault();
+            if (document.getElementById('context' + classgiv)) {
+                setTimeout(function () {
+                    document.getElementById('context' + classgiv).style.display = 'none';
+                }, 70);
+                //ContextMenus();
+
+            }
+            return false;
+        }, false);
+
+    }
+
+
+    array = [
+        ["<img src='img/iMac-icon.png' width='25px' /> A1", "function1()"],
+        ["<img src='img/Autodesk-Alias-Design-icon.png' width='25px' /> A2", "function2()"]
+    ];
+    class2context('class1', "titleA", array);
+    class2context('class3', "titleC", [
+        ["<img src='img/Actions-draw-brush-icon.png' width='25px' /> C1", "function1()"],
+        ["<img src='img/Actions-draw-brush-icon.png' width='25px' /> C3", "function3()"]
+    ]);
+    class2context('class2', "titleB", [
+        ["<img src='img/3d-material-drop-tool-icon.png' width='25px' /> B2", "function2()"],
+        ["<img src='img/Design-Briefs-icon.png' width='25px' /> B3", "function3()"]
+    ]);
+    class2context("classHeader", "titleTableMenu", [
+        ["header function 1", "function1()"],
+        ["header function 2", "function2()"]
+    ]);
+    class2context('class4', "title", [
+        ["option1", "function1()"],
+        ["option 2", "function2()"]
+    ]);
+    class2context('mainimg', "Image context menu", [
+        ["<img src='img/Actions-draw-brush-icon.png' width='25px' /> C1", "function1()"],
+        ["<img src='img/Actions-draw-brush-icon.png' width='25px' /> C3", "function3()"]
+    ]);
+    class2context('classSub2', "sub element context inside other element", [
+        ["<img src='img/Actions-draw-brush-icon.png' width='25px' /> C1", "function1()"]
+    ]);
+
+    function function1() {
+        alert("function 1 clicked");
+    }
+
+    function function2() {
+        alert("function 2 clicked");
+    }
+
+    function function3() {
+        alert("function 3 clicked");
+    }
+
+    function ContextMenus() {
+        console.log("context menu called");
+    }
+</script>
+
+
+</body>
+
+</html>

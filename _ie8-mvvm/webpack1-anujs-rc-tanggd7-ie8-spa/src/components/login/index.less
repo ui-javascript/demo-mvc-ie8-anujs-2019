@@ -1,0 +1,75 @@
+@import '../../style/style.less';
+
+body {
+  background-image: url('../../static/imgs/login-bg-img.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.login {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -165px;
+  margin-left: -240px;
+  height: 330px;
+  width: 480px;
+}
+
+.login-header {
+  margin: 0px auto 50px;
+  text-align: center;
+}
+
+.login-logo {
+  height: 44px;
+  vertical-align: top;
+  margin-right: 16px;
+  margin-top: 5px;
+}
+
+.login-title {
+  color: lighten(@gray-dark, 6%);
+  font-size: 33px;
+  font-weight: 600;
+}
+
+.login-form {
+  width: 350px;
+  margin: 0 auto;
+}
+
+.login-form-div {
+  position: relative;
+  margin-bottom: 15px;
+  b {
+    color: red;
+  }
+}
+
+.login-icon {
+  position: absolute;
+  z-index: 2;
+  left: 9px;
+  top: 10px;
+  width: 20px;
+  height: 20px;
+}
+
+.login-input {
+  height: 40px;
+  font-size: 16px;
+  padding-left: 35px;
+}
+
+.login-btn {
+  height: 36px;
+  width: 100%;
+}
+
+.login-wapper {
+  margin-bottom: 14px;
+  .login-forget {
+    float: right;
+  }
+}

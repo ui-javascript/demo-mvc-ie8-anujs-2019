@@ -1,0 +1,28 @@
+<template>
+    <div>
+
+        <div>
+            <a href="/">hello页面</a> | <a href="/#/hi">hi页面</a>
+        </div>
+
+        {{ msg }}
+
+        <div>
+            <img src="{{img}}" alt=""/>
+        </div>
+
+    </div>
+</template>
+
+
+<script>
+
+    module.exports = {
+        initData: function () {
+            return {
+                msg: 'Hi Component',
+                img: 'https://ss0.baidu.com/94o3dSag_xI4khGko9WTAnF6hhy/image/h%3D300/sign=1c5b5e74232eb938f36d7cf2e56385fe/d0c8a786c9177f3e2fb5a1987ccf3bc79e3d56a5.jpg'
+            }
+        }
+    }
+</script>

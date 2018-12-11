@@ -1,0 +1,72 @@
+/**
+ * layer.js自定义样式
+ */
+
+// layer自定义样式
+
+//.layui-layer-lan[type=dialog] {
+//  //min-width: 280px
+//}
+
+.layui-layer {
+  border-radius: 8px !important;
+}
+
+.layui-layer-zjds {
+
+  .layui-layer-title {
+    border-radius: 8px 8px 0 0;
+  }
+
+  .layui-layer-dialog .layui-layer-content {
+    font-size: 16px;
+  }
+
+  .layui-layer-setwin a {
+    width: 43px;
+    height: 43px;
+  }
+
+  &[type=dialog] {
+    //min-width: 280px;
+  }
+
+  .layui-layer-title {
+    background: @white;
+    color: @white;
+    border: none;
+  }
+
+  // close按钮
+  .layui-layer-setwin .layui-layer-close1 {
+    //background: url(../../../images/icon/close.png) no-repeat;
+
+    //.icon-close;
+    .sprite(@close);
+  }
+
+  //.layui-layer-btn {
+  //  padding: 5px 10px 10px;
+  //  text-align: right;
+  //  border-top: 1px solid #E9E7E7;
+  //
+  //  a {
+  //    background: #fff;
+  //    border-color: #E9E7E7;
+  //    color: #333;
+  //  }
+  //
+  //  .layui-layer-btn1 {
+  //    background: #C9C5C5;
+  //  }
+  //
+  //}
+
+  .layui-layer-btn .layui-layer-btn0 {
+    border-color: @red;
+    background-color: @red;
+    color: #fff;
+    border-radius: 4px;
+  }
+
+}

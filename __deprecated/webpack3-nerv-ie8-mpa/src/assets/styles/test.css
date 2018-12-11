@@ -1,0 +1,11 @@
+a {
+    color: #ddd
+}
+
+.common {
+    color: red;
+}
+
+:local .hello {
+    color: blue;
+}

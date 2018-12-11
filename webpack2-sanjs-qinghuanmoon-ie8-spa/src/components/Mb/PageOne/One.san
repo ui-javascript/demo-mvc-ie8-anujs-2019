@@ -1,0 +1,25 @@
+<template>
+    <div>
+        <div class="box">
+            <p>{{ msg }}</p>
+            <input type="text" value="{= inputdata =}">
+        </div>
+    </div>
+</template>
+
+
+<script>
+    module.exports =
+        {
+            initData: function () {
+                return {
+                    msg: 'This is MbPageOne',
+                    inputdata: 'hello'
+                }
+            }
+        }
+</script>
+
+<style lang="less" scoped>
+    @import "One";
+</style>

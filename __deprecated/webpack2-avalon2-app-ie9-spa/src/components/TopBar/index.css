@@ -1,0 +1,34 @@
+.topbar {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+.topbar img {
+    height: 80%;
+}
+
+.topbar .left {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.topbar .mid {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.topbar .right {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}

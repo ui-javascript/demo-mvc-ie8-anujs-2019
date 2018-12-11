@@ -1,0 +1,48 @@
+﻿<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>webpack-avalon2-SPA-seed</title>
+    <script>
+        /*IE8兼容start*/
+        if (!Array.prototype.indexOf) {
+            Array.prototype.indexOf = function (item, i) {
+                //alert("prototyping...");
+                i || (i = 0);
+                var length = this.length;
+                if (i < 0) i = length + i;
+                for (; i < length; i++)
+                    if (this[i] === item) return i;
+                return -1;
+            };
+        }
+        if (!window.WebSocket) {
+            window.WebSocket = function () { };
+            window.WebSocket.prototype = {
+                onmessage: function () { },
+                onclose: function () { },
+                onopen: function () { },
+                close: function(){}
+            }
+        }
+        /*IE8兼容end*/
+
+
+        if (!String.prototype.trim) {
+            String.prototype.trim = function () {
+                return this.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, '');
+            }
+        }
+    </script>
+</head>
+
+<body ms-controller="root">
+    <p><a href='#!/aa/first'>点我first</a>|<a href='#!/bb/second'>点我second</a>|<a href='#!/cc/third'>点我third</a>|<a href='#!/dd/four'>点我four</a></p>
+    <p ms-text="@currPath"></p>
+    <div ms-html="@headerPage"></div>
+    <div ms-html="@currPage"></div>
+    <div ms-html="@footerPage"></div>
+</body>
+
+</html>

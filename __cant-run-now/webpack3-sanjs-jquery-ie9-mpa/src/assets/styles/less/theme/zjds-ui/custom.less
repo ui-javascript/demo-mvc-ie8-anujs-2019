@@ -1,0 +1,223 @@
+// 尺寸
+
+
+
+@zjds-width-sm: 980px;
+@zjds-width: 1200px;
+@zjds-width-md: 1600px;
+@zjds-width-lg: 1920px;
+
+// 颜色
+@zjds-red: #e70012;
+@zjds-red-ball: #e60213;
+@zjds-black: #231816;
+
+@zjds-grey-content: #f8f8f8;
+@zjds-grey-btn: #b5b5b7;
+@zjds-grey-ball: #b5b5b7;
+@zjds-grey-title: #efefef;
+@zjds-grey-register-box: #efefef;
+@zjds-grey-input-content: #efefef;
+
+@zjds-blue: #1d2089;
+@zjds-blue-ball: #bce8f1;
+
+
+/**
+ * 数字时钟字体
+ */
+//@font-face {
+//  font-family: 'digital-7';
+//  src:url(../../../fonts/digital-7/digital-7.eot);
+//  src:url(../../../fonts/digital-7/digital-7-mono.ttf) format('truetype');
+//  //src:url('/fonts/mdicons/md-icons.eot?#iefix') format('embedded-opentype'),
+//  //  //url('/fonts/mdicons/md-icons.woff') format('woff'),
+//  //  //url('/fonts/mdicons/md-icons.ttf') format('truetype'),
+//  //url('/fonts/mdicons/md-icons.svg#md-icons') format('svg');
+//  font-weight: normal;
+//  font-style: normal;
+//}
+
+/*
+ * 调整
+ */
+.form-label {
+  text-align: left;
+}
+
+.js-print {
+  cursor: pointer;
+}
+
+/*
+ * 共用元素
+ */
+@input-width: 265px;
+@input-height: 40px;
+
+// 内嵌输入框
+.zjds-input {
+
+  .input();
+
+  //width: 80px;
+  height: @input-height;
+  line-height: @input-height;
+  border: none;
+  background: @white;
+  //width: 100%;
+
+  &.md {
+    width: 100px;
+  }
+
+}
+
+// 圆角输入框
+.zjds-o-input {
+  .input();
+  height: 24px;
+  line-height: 24px;
+
+  border: 1px solid @grey-light;
+  border-radius: 8px;
+
+  &.sm {
+    width: 50px;
+  }
+
+  &.md {
+    width: 100px;
+  }
+
+  &.lg {
+    width: 150px;
+  }
+
+  &.xl {
+    width: 200px;
+  }
+}
+
+// 自定义按钮
+@btn-height: 40px;
+.zjds-btn {
+  // 注意 不要指定默认size()
+  .btn();
+  border-radius: 8px;
+  border: 1px solid #ddd;
+
+  font-size: 17px;
+  font-weight: bold;
+
+  //word-spacing: 8px;
+  //letter-spacing: 8px;
+
+  // 红色按钮
+  &.red {
+    color: @white;
+    background-color: @zjds-red;
+  }
+
+  // 白色按钮
+  &.white {
+    color: @black;
+    background-color: @white;
+  }
+
+  &.grey {
+    color: @white;
+    background-color: @zjds-grey-btn;
+  }
+
+  &.xs {
+    font-size: 12px;
+    height: 24px;
+    //line-height: 24px;
+  }
+
+  &.sm {
+    font-size: 14px;
+    height: 30px;
+    //line-height: 30px;
+  }
+
+  &.md {
+    height: 50px;
+    //line-height: 50px;
+    font-size: 16px;
+  }
+
+}
+
+.zjds-form-group {
+  margin-top: 25px;
+  width: @input-width;
+  height: @input-height;
+  line-height: @input-height;
+  background-color: @white;
+  border: 1px solid @grey;
+  border-radius: 8px;
+  padding-left: 10px;
+
+  input {
+    border: none;
+    outline: none;
+  }
+}
+
+// 自定义下拉框
+.zjds-select {
+  border: none;
+  border-radius: 8px;
+  height: 24px;
+  line-height: 24px;
+
+  // 下拉框文字居中
+  text-align: center;
+  text-align-last: center;
+  .container();
+
+  &.sm {
+    width: 50px;
+  }
+
+  &.md {
+    width: 80px;
+  }
+
+  &.lg {
+    width: 150px;
+  }
+
+  // 下拉框文字居中
+  option {
+    text-align: center;
+    //padding: 0 0 0 20px;
+    text-align-last: center;
+  }
+
+}
+
+// 自定义表格
+.zjds-table {
+  .table();
+
+  border-radius: 8px;
+
+  th {
+    background: @grey-table;
+  }
+
+  td, th {
+    padding: 10px;
+    border: 1px solid @grey-light;
+  }
+
+}
+
+
+
+
+
+

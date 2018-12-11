@@ -1,0 +1,58 @@
+<div class="row">
+  <div class="help col-lg-20 col-lg-offset-2">
+    <h2>{{title}}</h2>
+    <h3>{{desc}}</h3>
+    <pre>
+        <!--<code>-->
+https://github.com/jm-team/ng-seed/wiki
+
+
+
+## FAQ
+
+### 第三方插件无法使用
+请确保在app模块下引入依赖的插件模块
+```js
+var app = angular.module('app', ['ui.router', 'ngResource','pasvaz.bindonce', 'ui.bootstrap', 'jmui', 'afkl.lazyImage']);
+```
+
+### svn git 使用细节
+1. .idea 文件夹需要设为ignore，避免影响到其他开发人员的WebStorm面板（.vscode一样）
+2. node_modules 文件夹需要设为ignore，该文件夹包含文件过多，应由开发人员本地安装
+
+### webStorm 使用细节
+1. webpack热更新需要将自动保存功能取消，setting> system setting > use "safe write"
+2. node_modules文件夹包含文件过多时，WS会卡死 需右键将该文件夹Mark Directory As > Excluded
+
+### webpack热更新配置
+1. build.config.js - `host`修改后不可随意提交，会导致其他开发人员更新后无法启动
+2. build.config.js - `port`多个项目启动时注意设置不同端口
+
+### 代码build后,在IE8下报错
+1. 不支持保留字作为属性（`default`，`class`），在uglify版本v2.7.0以上，配置`screw_ie8: false`
+2. angular未定义, 在uglify版本v2.7.0以上，对象的方法加了多余的函数名，代码混淆后替代了angular
+3. 本地打包正常，运维打包异常
+> 使用yarn，使用yarn，使用yarn，只要固定了webpack的版本为1.13.2，其他模块都将采用webpack依赖的uglify， 版本为v2.6.4
+
+### yarn安装失败
+1. 强烈建议使用淘宝镜像
+```
+yarn config set registry http://registry.npm.taobao.org
+```
+2. 指定node-sass的下载源
+```
+yarn config set sass-binary-site http://npm.taobao.org/mirrors/node-sass
+```
+3. phantomjs安装失败 指定phantomjs淘宝镜像
+```
+yarn config set phantomjs_cdnurl http://npm.taobao.org/mirrors/phantomjs
+```
+4. http(s)协议导致的其他模块下载异常
+http://registry.npm.taobao.org 改为 https://registry.npm.taobao.org, 浏览器直接访问下载异常的模块，查看是否可以正常打开
+
+> 安装失败请删除node_modules文件夹，再重新安装。可输入｀yarn config list｀查看修改的配置项是否正确
+
+            <!--</code>-->
+    </pre>
+  </div>
+</div>

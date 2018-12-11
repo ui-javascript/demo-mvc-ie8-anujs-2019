@@ -1,0 +1,10 @@
+$header-height: 85px;
+
+body {
+	padding-top:    $header-height;
+	padding-bottom: $header-height;
+}
+
+img {
+	max-width: 100%;
+}

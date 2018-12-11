@@ -1,0 +1,10 @@
+.container{
+  width: 1200px;
+  margin: 0 auto;
+  @include clearfix;
+  .login-form{
+    width: 400px;
+    margin: 0 auto;
+    @include clearfix;
+  }
+}

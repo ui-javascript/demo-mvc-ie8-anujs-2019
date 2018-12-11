@@ -1,0 +1,96 @@
+@import '../../../style/variables.less';
+
+.jerry-btn {
+  display: inline-block;
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+  background-image: none;
+  border: 1px solid lighten(@gray-light, 20%);
+  border-radius: 4px;
+  color: @gray-light;
+  background-color: @white;
+  &:hover {
+    color: @blue;
+    border-color: @blue;
+  }
+  &:active {
+    color: darken(@blue, 10%);
+    border-color: darken(@blue, 10%);
+  }
+  &[disabled] {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }
+  &:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }
+}
+
+.jerry-btn-primary {
+  background-color: @blue;
+  border: 1px solid transparent;
+  color: @white;
+  &:hover {
+    color: @white;
+    background-color: lighten(@blue, 10%);
+    border-color: lighten(@blue, 10%);
+  }
+  &:active {
+    color: @white;
+    background-color: darken(@blue, 10%);
+    border-color: darken(@blue, 10%);
+  }
+  &[disabled] {
+    background-color: lighten(@blue, 20%);
+    cursor: not-allowed;
+  }
+}
+
+.jerry-btn-info {
+  background-color: @cyan;
+  border: 1px solid transparent;
+  color: @white;
+  &:hover {
+    color: @white;
+    background-color: lighten(@cyan, 10%);
+    border-color: lighten(@cyan, 10%);
+  }
+  &:active {
+    color: @white;
+    background-color: darken(@cyan, 10%);
+    border-color: darken(@cyan, 10%);
+  }
+  &[disabled] {
+    background-color: lighten(@cyan, 15%);
+    cursor: not-allowed;
+  }
+}
+
+.jerry-btn-danger {
+  background-color: #f2f2f2;
+  border: 1px solid @gray-lighter;
+  color: @red;
+  &:hover {
+    color: @white;
+    background-color: @red;
+    border-color: @red;
+  }
+  &:active {
+    color: @white;
+    background-color: darken(@red, 10%);
+    border-color: darken(@red, 10%);
+  }
+  &[disabled] {
+    background-color: #cccccc;
+    color: @red;
+    cursor: not-allowed;
+  }
+}

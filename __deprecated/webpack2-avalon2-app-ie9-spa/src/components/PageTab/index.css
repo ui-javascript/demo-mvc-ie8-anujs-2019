@@ -1,0 +1,99 @@
+.pagetab {
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    position: relative;
+}
+
+.pagetab ul,
+.pagetab li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.pagetab__header {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 3.5rem;
+    line-height: 3.4rem;
+    border-bottom: solid .2rem #203040;
+}
+
+.pagetab__header .left {
+    float: left;
+    border-right: solid 1px #e7e7e7;
+}
+
+.pagetab__header .glyphicon {
+    padding: 0 .3rem;
+}
+
+.pagetab__header .link {
+    display: block;
+    float: left;
+    height: 100%;
+    padding: 0 1rem;
+    border-right: solid 1px #e7e7e7;
+    color: #999;
+    cursor: pointer;
+}
+
+.pagetab__header .dropdown-menu {
+    border-radius: 0;
+}
+
+.pagetab__header a {
+    color: #999;
+    text-decoration: none;
+}
+
+.pagetab__header .link:hover {
+    background: #eee;
+}
+
+.pagetab__header .mid {
+    overflow: hidden;
+}
+
+.pagetab__header .right {
+    float: right;
+    border-left: solid 1px #e7e7e7;
+}
+
+.pagetab__title__wrapper {
+    height: 100%;
+    width: 1000rem;
+}
+
+.pagetab__title {
+    float: left;
+    display: block;
+    border-right: solid 1px #eee;
+}
+
+.pagetab__title .nav-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 0 .6rem;
+    text-decoration: none;
+    color: #999;
+}
+
+.pagetab__title.checked .nav-link {
+    background: #203040;
+    color:#eee;
+}
+
+.pagetab__content {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 3.5rem;
+    bottom: 0;
+    z-index: 101;
+    overflow: auto;
+}

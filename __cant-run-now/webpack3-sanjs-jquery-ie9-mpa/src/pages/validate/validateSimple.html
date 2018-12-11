@@ -1,0 +1,76 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>仿支付宝验证码输入-jq22.com</title>
+
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/es5-shim/4.5.10/es5-shim.min.js"></script>
+    <script src="https://cdn.bootcss.com/es5-shim/4.5.10/es5-sham.min.js"></script>
+    <![endif]-->
+    
+    <script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+<style>
+    
+
+</style>
+</head>
+<body>
+<div class="certificateInput" id="demo">
+    <input type="text" class="border" autofocus="autofocus" maxlength="1" id="dy">
+    <input type="text" maxlength="1" required >
+    <!--<input type="text" maxlength="1" id="space">-->
+    <input type="text" maxlength="1" required >
+    <input type="text" maxlength="1" required >
+    <input type="text" maxlength="1" required >
+    <input type="text" maxlength="1" required >
+    <input type="text" maxlength="1" required >
+    <input type="text" maxlength="1" required >
+    <input type="text" maxlength="1" required >
+    <input type="text" maxlength="1" required >
+    <input class="last-child" type="text" maxlength="1" required >
+    <!--<span id="spa">-</span>-->
+</div>
+
+<script>
+    
+
+function CertificateInput(box, cls) {
+    
+    var wrap = document.getElementById(box);
+    var txts = wrap.getElementsByTagName("input");
+    
+    for (var i = 0; i < txts.length; i++) {
+        var t = txts[i];
+        t.index = i;
+        t.setAttribute("readonly", true);
+        t.onkeyup = function() {
+            this.value = this.value.replace(/\D/g, '');
+            if (this.value == "") {
+                return false;
+            }
+            var next = this.index + 1;
+            var last = this.index;
+            if (next > txts.length - 1) return;
+            txts[next].removeAttribute("readonly");
+            txts[next].focus();
+            txts[next].className = cls;
+            txts[last].classList.remove(cls);
+
+        }
+    }
+    txts[0].removeAttribute("readonly");
+}
+
+
+CertificateInput("demo", "border");
+
+</script>
+
+</body>
+</html>

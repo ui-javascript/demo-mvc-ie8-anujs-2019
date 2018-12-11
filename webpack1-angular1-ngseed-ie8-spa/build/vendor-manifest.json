@@ -1,0 +1,16 @@
+{
+  "name": "vendor_265ecf80",
+  "content": {
+    "./node_modules/_angular@1.2.29@angular/index.js": 1,
+    "./node_modules/_angular@1.2.29@angular/angular.js": 2,
+    "./node_modules/_angular-sanitize@1.2.29@angular-sanitize/index.js": 3,
+    "./node_modules/_angular-sanitize@1.2.29@angular-sanitize/angular-sanitize.js": 4,
+    "./node_modules/_angular-resource@1.2.29@angular-resource/index.js": 5,
+    "./node_modules/_angular-resource@1.2.29@angular-resource/angular-resource.js": 6,
+    "./node_modules/_angular-animate@1.2.29@angular-animate/index.js": 7,
+    "./node_modules/_angular-animate@1.2.29@angular-animate/angular-animate.js": 8,
+    "./node_modules/_angular-ui-router@0.2.18@angular-ui-router/release/angular-ui-router.js": 9,
+    "./node_modules/_angular-lazy-image@0.3.4@angular-lazy-image/dist/lazy-image.js": 10,
+    "./node_modules/_angular-bindonce@0.3.1@angular-bindonce/bindonce.js": 11
+  }
+}

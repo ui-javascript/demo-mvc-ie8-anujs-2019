@@ -1,0 +1,55 @@
+<template>
+    <div id="dowebok">
+        <div class="section p1">
+            <div class="pc visible-lg visible-md">
+                <pcpageone>
+                    <h1 slot="title">this is title</h1>
+                    <span slot="hello">this is hello</span>
+                </pcpageone>
+            </div>
+            <div class="mb visible-sm visible-xs">
+                <mbpageone></mbpageone>
+            </div>
+        </div>
+        <div class="section p2">
+            <div class="pc visible-lg visible-md">
+                <pcpagetwo></pcpagetwo>
+            </div>
+            <div class="pc visible-xs visible-sm">
+                <mbpagetwo></mbpagetwo>
+            </div>
+        </div>
+        <div class="section">第三屏</div>
+        <div class="section">第四屏</div>
+    </div>
+
+</template>
+
+
+<script>
+    var mbPageOne = require('../components/Mb/PageOne/One.san');
+    var mbPageTwo = require('../components/Mb/PageTwo/Two.san');
+    var pcPageOne = require('../components/Pc/PageOne/One.san');
+    var pcPageTwo = require('../components/Pc/PageTwo/Two.san');
+
+
+    var options = require('../config/options.js')
+    module.exports =
+        {
+            components:
+                {
+                    mbpageone: mbPageOne,
+                    mbpagetwo: mbPageTwo,
+                    pcpageone: pcPageOne,
+                    pcpagetwo: pcPageTwo,
+                },
+            compiled: function () {
+                $(function () {
+                    $('#dowebok').fullpage(
+                        options,
+                    );
+                })
+            },
+
+        }
+</script>

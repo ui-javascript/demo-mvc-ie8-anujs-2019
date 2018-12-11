@@ -1,0 +1,92 @@
+// 表单前必填 *
+@import "../../config/_import";
+@import "../../utilities/_import";
+
+.field-required {
+  margin-right: 3px;
+  position: relative;
+  top: 3px;
+
+  &:after {
+    content: '*';
+    color: @red;
+    font-weight: bold;
+  }
+
+}
+
+// 表单组合
+.form-group {
+  .mt(lg);
+  position: relative;
+
+  // 自带浮动效果
+  zoom: 1;
+
+  &:after {
+    display: block;
+    clear: both;
+    content: "";
+    visibility: hidden;
+    height: 0;
+  }
+
+  button,
+  label,
+  input,
+  select,
+  select-group,
+  select-box {
+    float: left;
+  }
+
+  label {
+    input[type="radio"] {
+      margin-top: 6px;
+      margin-right: 5px;
+    }
+  }
+
+}
+
+.form-label {
+  //width: 80px;
+  //padding-right: 10px;
+  display: inline-block;
+  text-align: right;
+  //font-size: 14px;
+
+  // 此部分定制
+  &.sm {
+    width: 60px;
+  }
+  &.md {
+    width: 100px;
+  }
+  &.lg {
+    width: 120px;
+  }
+}
+
+// 对齐
+//.input-inline-txt {
+//  margin-top: @top-sm;
+//  margin-bottom: @top-sm;
+//}
+//
+//.form-align {
+//  display: inline-block;
+//  height: 30px;
+//  //line-height: 30px;
+//  .center(bar-y, 30px);
+//}
+
+// 通用输入框
+.input() {
+  outline: none;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  padding: 5px;
+}
+
+

@@ -1,0 +1,20 @@
+<template>
+    <div class="box">
+        <p>{{ msg }}</p>
+    </div>
+</template>
+
+<script>
+    module.exports =
+        {
+            initData: function () {
+                return {
+                    msg: 'This is PcPageTwo'
+                }
+            }
+        }
+</script>
+
+<style lang="less" scoped>
+    @import 'Two';
+</style>

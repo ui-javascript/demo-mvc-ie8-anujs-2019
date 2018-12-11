@@ -1,0 +1,8 @@
+<div>
+  <h4>{{vm.title}} <span class="small">自定义模版</span></h4>
+  <div>
+    <p>{{vm.content}}</p>
+  </div>
+  <p ng-if="vm.closing"> <strong class="text-danger">{{ vm.time }}</strong>秒后关闭</p>
+  <button class='jm-btn jm-btn-danger' ng-click='vm.ok($event)'>删除？</button>
+</div>

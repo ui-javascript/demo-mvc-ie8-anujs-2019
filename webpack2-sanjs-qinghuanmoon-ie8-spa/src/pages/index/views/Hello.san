@@ -1,0 +1,29 @@
+<template>
+    <div>
+
+        <div>
+            <a href="/">hello页面</a> | <a href="/#/hi">hi页面</a>
+        </div>
+
+
+        <p>{{msg}}</p>
+
+        <div class="hello">
+            <span class="hello">Hello {{name}} !</span>
+        </div>
+
+        <input type="text" value="{= name =}">
+    </div>
+</template>
+
+<script>
+
+    module.exports = {
+        initData: function () {
+            return {
+                msg: 'Hello Component',
+                name: 'hello'
+            }
+        }
+    }
+</script>

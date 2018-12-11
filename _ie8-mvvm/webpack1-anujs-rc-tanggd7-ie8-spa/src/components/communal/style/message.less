@@ -1,0 +1,40 @@
+@import '../../../style/variables.less';
+
+@message-prefix-cls: ~'jerry-message';
+
+.@{message-prefix-cls} {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  top: 65px;
+  left: 0;
+  pointer-events: none;
+  &-notice {
+    padding: 8px;
+    text-align: center;
+    &:first-child {
+      margin-top: -8px;
+    }
+  }
+  &-notice-content {
+    border: 1px solid #bbbbbb\0;
+    padding: 10px 16px;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px @gray-light;
+    background: @white;
+    display: inline-block;
+    pointer-events: all;
+    vertical-align: middle;
+    text-align: left;
+  }
+  img {
+    height: 18px;
+    margin-right: 6px;
+    position: relative;
+    top: 3px;
+  }
+}

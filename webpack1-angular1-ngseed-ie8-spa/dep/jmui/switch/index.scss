@@ -1,0 +1,103 @@
+.jm-switch {
+  display: inline-block;
+  position: relative;
+  font-size: 14px;
+  line-height: 22px;
+  height: 22px;
+  vertical-align: middle;
+  font-weight: normal;
+
+  .jm-switch__input {
+    opacity: 0;
+    filter:alpha(opacity=0);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 0;
+    z-index: 5;
+    cursor: pointer;
+  }
+
+  .jm-switch__button {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 2px;
+    left: 36px;
+    border-radius: 100%;
+    transition: all 0.3s;
+    background: #fff;
+    //transform: translate(36px, 2px);
+  }
+
+  .jm-switch__core {
+    width: 100%;
+    margin: 0;
+    display: inline-block;
+    position: relative;
+    height: 22px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    outline: none;
+    border-radius: 12px;
+    transition: border-color 0.3s, background-color 0.3s;
+  }
+
+  .jm-switch__left,
+  .jm-switch__right {
+    position: absolute;
+    top: 0;
+    background-color: transparent;
+    height: 22px;
+    color: #fff;
+    line-height: 22px;
+
+    .text {
+      position: absolute;
+    }
+  }
+
+  .jm-switch__left {
+    left: 0;
+
+    .text {
+      left: 8px;
+    }
+  }
+
+  .jm-switch__right {
+    right: 0;
+
+    .text {
+      right: 8px;
+    }
+  }
+
+  &.on {
+    .jm-switch__right {
+      display: none;
+    }
+
+    .jm-switch__left {
+      display: block;
+    }
+  }
+
+  &.off {
+    .jm-switch__right {
+      display: block;
+    }
+
+    .jm-switch__left {
+      display: none;
+    }
+
+    .jm-switch__button {
+      left: 5px;
+      top: 2px;
+      //transform: translate(5px, 2px);
+    }
+  }
+}

@@ -1,0 +1,111 @@
+@import '../../../style/variables.less';
+@search-border: #cedeec;
+@search-btn: #2eb7f5;
+
+// .jerry-qg-cd-header {
+//   background: url(../../../static/imgs/query_grid_condition.gif) left bottom
+//     repeat-x;
+//   width: 100%;
+//   height: 42px;
+//   margin: 0 auto;
+//   border: 0;
+//   border-collapse: collapse;
+//   border-bottom: 1px solid #c3dbee;
+//   button {
+//     margin-top: 5px;
+//     margin-right: 5px;
+//     float: right;
+//   }
+//   div {
+//     background: url(../../../static/imgs/query_grid_condition.gif) left top
+//       no-repeat;
+//     padding-left: 38px;
+//     line-height: 42px;
+//     color: #008bf0;
+//     font-size: 16px;
+//   }
+// }
+
+.jerry-qg-cd-content {
+  .jerry-qg-cd-cell {
+    display: table;
+    width: 100%;
+    background-color: #eaf4fa;
+    .jerry-qg-cd-content-label {
+      width: 10%;
+      text-align: right;
+      color: #008bf0;
+      display: table-cell;
+      background-color: #f7f7f7;
+      border: 1px solid @search-border;
+      border-top: none;
+      border-left: none;
+      padding: 4px;
+    }
+    .jerry-qg-cd-content-label:first-child {
+      // border-left: 1px solid @search-border;
+    }
+    .jerry-qg-cd-content-span {
+      width: 40%;
+      display: table-cell;
+      border-bottom: 1px solid @search-border;
+      border-right: 1px solid @search-border;
+      padding: 4px;
+    }
+    .jerry-qg-cd-content-span:last-child {
+      border-right: none;
+    }
+    .jerry-qg-cd-content-single {
+      width: 90%;
+      display: table-cell;
+      border-bottom: 1px solid @search-border;
+      border-right: none;
+      padding: 4px;
+    }
+    .jerry-qg-cd-search {
+      display: table-cell;
+      // border: 1px solid @search-border;
+      // border-top: none;
+      // border-bottom: none;
+      .jerry-qg-cd-btn {
+        margin: 5px 5px 5px 28px;
+        background-color: @search-btn;
+        padding: 6px 30px;
+        &:hover {
+          background-color: lighten(@search-btn, 10%);
+          border-color: lighten(@search-btn, 10%);
+        }
+        &:active {
+          background-color: darken(@search-btn, 10%);
+          border-color: darken(@search-btn, 10%);
+        }
+      }
+      .jerry-qg-cd-a {
+        margin-left: 20px;
+      }
+    }
+  }
+}
+
+.jerry-qg-toolbar {
+  margin-top: 15px;
+}
+
+.jerry-qg-toolbar {
+  button {
+    margin-right: 5px;
+  }
+}
+
+.jerry-qg-table {
+  margin-top: 5px;
+  .jerry-qg-table-loading {
+    color: @gray-light;
+  }
+  img {
+    height: 18px;
+    margin-right: 6px;
+    position: relative;
+    top: 4px;
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "presets":[["env", {"loose": true}], "stage-2","react"],
+  "plugins": [
+    ["import", {
+      "libraryName": "antd",
+      "style": "css"
+    }],
+    "add-module-exports"
+  ]
+}

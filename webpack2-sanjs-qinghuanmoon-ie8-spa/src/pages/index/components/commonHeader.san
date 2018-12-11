@@ -1,0 +1,18 @@
+<template>
+    <div>
+        <a href="/">hello</a>
+        <a href="/#/hi">hi</a>
+    </div>
+</template>
+
+<script>
+    module.exports =
+        {
+            initData: function () {
+                return {
+                    // msg: 'Hello Component',
+                    // name: 'hello'
+                }
+            }
+        }
+</script>

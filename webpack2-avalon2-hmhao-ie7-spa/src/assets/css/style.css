@@ -1,0 +1,16 @@
+/**自定义样式*/
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1200px;
+}
+
+.center-container {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.w-1200 {
+    width: 1200px;
+}

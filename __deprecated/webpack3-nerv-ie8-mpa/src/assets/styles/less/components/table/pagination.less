@@ -1,0 +1,51 @@
+/**
+ * 客户端分页
+ * 一次性获取所有但少量数据,前端控制显示
+ * 前端自渲染|客户端 分页
+ * 思路是一次性获取所有数据(少量),然后前端控制一下显示
+ * http://www.jq22.com/jquery-info13734
+ * 带页码跳转 http://www.jq22.com/jquery-info17447
+ * 自渲染分页 http://www.jq22.com/jquery-info13810
+ */
+
+@import "../../config/_import";
+@import "../../utilities/_import";
+
+.client-pagination {
+  list-style: none;
+
+  > li {
+    float: left;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+
+  .pageItem {
+    border: solid thin #ddd;
+    margin: 5px;
+
+    &:hover {
+      border: solid thin @red;
+      background-color: @red;
+      color: white;
+    }
+  }
+
+  .pageItemActive {
+    border: solid thin @red;
+    margin-left: 10px;
+    background-color: @red;
+    color: white;
+  }
+
+  .pageItemDisable {
+    border: solid thin #ddd;
+    margin-left: 10px;
+    background-color: #ddd;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+}

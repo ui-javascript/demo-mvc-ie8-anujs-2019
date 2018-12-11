@@ -1,0 +1,24 @@
+<template>
+    <div>
+        <div class="box">
+            <p>{{ msg }}</p>
+        </div>
+    </div>
+</template>
+
+
+<script>
+    var sanStore = require('san-store')
+    module.exports =
+        {
+            initData: function () {
+                return {
+                    msg: 'This is MbPageTwo'
+                }
+            },
+        }
+</script>
+
+<style lang="less" scoped>
+    @import "Two";
+</style>

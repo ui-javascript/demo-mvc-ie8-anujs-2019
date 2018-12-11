@@ -1,0 +1,38 @@
+<template>
+    <div class="box">
+        <p>{{ msg }}</p>
+        <input type="text" value="{= inputdata =}">
+        {{ inputdata }}
+        {{ name }}
+        <button on-click="changeData">Click Me</button>
+        <h1>
+            <slot name="title"></slot>
+        </h1>
+        <button>
+            <slot name="hello"></slot>
+        </button>
+    </div>
+</template>
+
+<script>
+    module.exports =
+        {
+            initData: function () {
+                return {
+                    msg: 'This is PcPageOne',
+                    inputdata: 'Hello',
+                }
+            },
+            dataTypes: {
+                msg: DataTypes.string
+            },
+            changeData: function () {
+                this.data.set('msg', 'Hello World')
+            },
+        }
+
+</script>
+
+<style lang="less" scoped>
+    @import "One";
+</style>
