@@ -2,7 +2,6 @@ import "es5-polyfill"
 // import "babel-profill"
 // import 'babel-polyfill'
 
-
 import san from 'san'
 
 import {router} from 'san-router'
