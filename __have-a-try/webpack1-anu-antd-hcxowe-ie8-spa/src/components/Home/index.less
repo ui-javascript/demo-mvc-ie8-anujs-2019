@@ -1,0 +1,63 @@
+@head-height: 58px;
+.home {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    &-head {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: @head-height;
+        padding: 0px 36px;
+        border-bottom: 2px solid #2db7f5;
+        z-index: 9;
+        &-icon {
+            height: 100%;
+            float: left;
+            img {
+                height: 100%;
+                vertical-align: middle;
+                margin-right: 12px;
+            }
+        }
+        &-menu {
+            float: right;
+            border-bottom: none;
+            line-height: 56px;
+
+            .ant-menu-submenu-horizontal {
+                border-bottom: none !important;
+            }
+        }
+    }
+    &-main {
+        position: absolute;
+        top: @head-height;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        &-left {
+            width: 240px;
+            height: 100%;
+            overflow: auto;
+
+            .ant-menu-item {
+                text-align: center;
+            }
+        }
+
+        &-center {
+            position: absolute;
+            top: 0;
+            left: 240px;
+            right: 0;
+            bottom: 0;
+            overflow: auto;
+        }
+    }
+}

@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "jsx": "react",
+    "experimentalDecorators": true,
+    "baseUrl": "./",
+    "paths": {
+      "static/*": ["./src/static/*"],
+      "ui": ["./src/components/communal/index"],
+      "ui/*": ["./src/components/communal/*"],
+      "tool": ["./src/tool/index"],
+      "tool/*": ["./src/tool/*"]
+    }
+  },
+  "exclude": ["node_modules",
+    "build"
+  ],
+  "include": ["src/**/*"]
+}

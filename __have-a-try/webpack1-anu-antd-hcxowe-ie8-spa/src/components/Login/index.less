@@ -1,0 +1,30 @@
+.login-wrap {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    text-align: center;
+    font-size: 0;
+    white-space: nowrap;
+    overflow: auto;
+
+    &:after {
+        content: '';
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+    }
+
+    .login-dialog {
+        display: inline-block;
+        vertical-align: middle;
+        text-align: left;
+        font-size: 14px;
+        white-space: normal;
+        padding: 25px 50px;
+        border: 1px solid #eee;
+        width: 400px;
+
+        .login-item {
+            margin: 15px;
+        }
+    }
+}

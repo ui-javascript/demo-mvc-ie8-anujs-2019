@@ -1,0 +1,44 @@
+{
+  "name": "anu-ie8",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "install": "npm install",
+    "remove": "rimraf node_modules",
+    "dev": "webpack-dev-server --watch-poll --hot --inline --progress",
+    "dev:ie": "webpack-dev-server --watch-poll --progress",
+    "build": "webpack --config webpack.prod.config.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^6.4.1",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "clean-webpack-plugin": "^0.1.19",
+    "css-loader": "^0.28.11",
+    "es3ify-webpack-plugin": "0.0.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^1.1.11",
+    "html-webpack-plugin": "^3.2.0",
+    "less": "^3.0.4",
+    "less-loader": "^4.1.0",
+    "style-loader": "^0.21.0",
+    "url-loader": "^1.0.1",
+    "webpack": "1.13.0",
+    "webpack-dev-server": "^1.16.5"
+  },
+  "dependencies": {
+    "antd": "^1.11.6",
+    "anujs": "^1.4.4",
+    "babel-polyfill": "^6.26.0",
+    "console-polyfill": "^0.3.0",
+    "es5-shim": "^4.5.10",
+    "jquery": "^1.12.4",
+    "media-match": "^2.0.3",
+    "react-router": "^2.3.0"
+  }
+}
