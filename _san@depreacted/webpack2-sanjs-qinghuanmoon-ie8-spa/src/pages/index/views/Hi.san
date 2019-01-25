@@ -2,7 +2,7 @@
     <div>
 
         <div>
-            <a href="/">hello页面</a> | <a href="/#/hi">hi页面</a>
+            <a href="/">hello页面</a> | <a href="#/hi">hi页面</a>
         </div>
 
         {{ msg }}

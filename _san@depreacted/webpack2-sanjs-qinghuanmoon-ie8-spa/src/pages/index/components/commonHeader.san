@@ -1,7 +1,7 @@
 <template>
     <div>
         <a href="/">hello</a>
-        <a href="/#/hi">hi</a>
+        <a href="?#/hi">hi</a>
     </div>
 </template>
 

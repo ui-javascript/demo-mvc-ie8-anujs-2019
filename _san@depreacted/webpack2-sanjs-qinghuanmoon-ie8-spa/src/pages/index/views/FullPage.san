@@ -27,13 +27,13 @@
 
 
 <script>
-    var mbPageOne = require('../components/Mb/PageOne/One.san');
-    var mbPageTwo = require('../components/Mb/PageTwo/Two.san');
-    var pcPageOne = require('../components/Pc/PageOne/One.san');
-    var pcPageTwo = require('../components/Pc/PageTwo/Two.san');
+    var mbPageOne = require('../../../components/Mb/PageOne/One.san');
+    var mbPageTwo = require('../../../components/Mb/PageTwo/Two.san');
+    var pcPageOne = require('../../../components/Pc/PageOne/One.san');
+    var pcPageTwo = require('../../../components/Pc/PageTwo/Two.san');
 
 
-    var options = require('../config/options.js')
+    var options = require('../../../config/options.js')
     module.exports =
         {
             components:
