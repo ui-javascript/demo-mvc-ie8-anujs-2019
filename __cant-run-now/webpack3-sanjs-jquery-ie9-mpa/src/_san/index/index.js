@@ -1,4 +1,5 @@
-import "es5-polyfill"
+require('es5-polyfill')
+// import "es5-polyfill"
 // import "babel-profill"
 // import 'babel-polyfill'
 
