@@ -1,6 +1,6 @@
 /*!
  * antd v1.11.6
- * 
+ *
  * Copyright 2015-present, Alipay, Inc.
  * All rights reserved.
  */
@@ -526,9 +526,13 @@ samp {
 }
 @font-face {
   font-family: 'anticon';
-  src: url('./static/antd/fonts/iconfont.eot');
+  src: url('/static/antd/fonts/iconfont.eot');
   /* IE9*/
-  src: url('./static/antd/fonts/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('./static/antd/fonts/iconfont.woff') format('woff'), /* chrome、firefox */ url('./static/antd/fonts/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/ url('./static/antd/fonts/iconfont.svg#iconfont') format('svg');
+  src: url('/static/antd/fonts/iconfont.eot?#iefix') format('embedded-opentype'),
+  /* IE6-IE8 */ url('/static/antd/fonts/iconfont.woff') format('woff'),
+  /* chrome、firefox */
+  url('/static/antd/fonts/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('/static/antd/fonts/iconfont.svg#iconfont') format('svg');
   /* iOS 4.1- */
 }
 .anticon {

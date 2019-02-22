@@ -25,7 +25,8 @@ module.exports = {
             "react-dom": "anujs/dist/ReactIE.js",
             'prop-types': 'anujs/lib/ReactPropTypes',
             'devtools' : "anujs/lib/devtools",
-            'create-react-class': 'anujs/lib/createClass'
+            'create-react-class': 'anujs/lib/createClass',
+            '@': path.join(__dirname, 'src')
         }
     },
     module: {
@@ -46,7 +47,7 @@ module.exports = {
                 loader: extractLESS.extract('css-loader!less-loader')
             },
             {
-                test: /\.(png|jpg|gif|bmp|svg|swf)(\?.*$|$)/, 
+                test: /\.(png|jpg|gif|bmp|svg|swf)(\?.*$|$)/,
                 loader: 'url-loader?limit=1024&name=[name].[ext]&outputPath=/img/'
             },
             {

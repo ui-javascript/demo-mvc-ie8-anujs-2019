@@ -6,9 +6,9 @@ const fm = (list, file) => {
 	const txt = list.map(
 		v => fs.readFileSync(dir(v), "utf-8")
 	).join("\n") || "";
-	const target = dir("build");
+	const target = dir("dist");
 	fs.existsSync(target) || fs.mkdirSync(target);
-	fs.writeFileSync(dir("build", file), txt, "utf-8");
+	fs.writeFileSync(dir("dist", file), txt, "utf-8");
 };
 
 const jsList = [

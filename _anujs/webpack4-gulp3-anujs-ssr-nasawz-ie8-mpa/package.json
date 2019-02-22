@@ -16,7 +16,7 @@
     "start:server": "npx nodemon --watch build build/server.bundle.js",
     "build:anu": "npx gulp --gulpfile ./lib/gulpfile.js",
     "build:polyfill": "npx gulp --gulpfile ./lib/gulpfile.js polyfill",
-    "ssr": "npx npm-run-all --parallel watch:client watch:server start:server"
+    "build:ssr": "npx npm-run-all --parallel watch:client watch:server start:server"
   },
   "keywords": [],
   "devDependencies": {
