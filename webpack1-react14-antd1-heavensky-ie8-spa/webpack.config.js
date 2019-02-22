@@ -97,7 +97,7 @@ const commonConfig = {
 				to: "static",
 			},
 			{
-				context: "build",
+				context: "dist",
 				from: "*.dll.js",
 				to: "static/js",
 			},

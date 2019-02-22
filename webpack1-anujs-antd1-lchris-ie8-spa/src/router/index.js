@@ -5,15 +5,15 @@ const routes = {
   },
   childRoutes: [
     {
-      path: '/login/user',
+      path: '/login',
       getComponent (nextState, cb) {
-        require.ensure([], require => cb(null, require('@/views/login/user')), 'loginUser')
+        require.ensure([], require => cb(null, require('@/views/login')), 'login')
       },
     },
     {
-      path: '/login/student',
+      path: '/table',
       getComponent (nextState, cb) {
-        require.ensure([], require => cb(null, require('@/views/login/student')), 'loginStudent')
+          require.ensure([], require => cb(null, require('@/views/table')), 'table')
       },
     },
   ]
