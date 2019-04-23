@@ -1,9 +1,21 @@
-import "./scss/common";
-import React from "react";
-import ReactDOM from "react-dom";
-React.createClass = require('create-react-class')
+// 1. 腻子脚本
+require('es5-shim')
+require('es5-shim/es5-sham')
+// @attention
+// babel-polyfill 已在配置入口引入
+// require('babel-polyfill')
+require('console-polyfill')
 
-import { Router, Route, IndexRedirect, IndexRoute, Link, hashHistory , browserHistory } from 'react-router';
+// 2. 样式
+import "./scss/common";
+
+// 3. React
+import React from "react";
+import 'create-react-class'
+import ReactDOM from "react-dom";
+import { Router, Route, IndexRedirect, IndexRoute, Link, hashHistory ,browserHistory } from 'react-router';
+
+// 4. 组件
 import {Navigation} from "./components";
 import Index from './pages/User/Index';
 import Login from './pages/User/Login';
@@ -16,7 +28,7 @@ import Page04 from './pages/Page04';
 import Page05 from './pages/Page05';
 import Add from './pages/Add';
 
-
+// 5. App
 class App extends React.Component{
     render() {
         return (
@@ -30,9 +42,10 @@ class App extends React.Component{
     }
 }
 
+// 6. 挂载
 ReactDOM.render(
-    <Router history={hashHistory}>
-    {/*<Router history={browserHistory}>*/}
+    // <Router history={hashHistory}>
+    <Router history={browserHistory}>
         <Route path="/" component={App}>
             <IndexRedirect to="/Index" />
             {/* 这块的注释一定要加外层大口号会有bug */}
@@ -51,4 +64,3 @@ ReactDOM.render(
     </Router>,
     document.getElementById("app")
 )
-

@@ -7,10 +7,11 @@ const webpack = require('webpack'),
     es3ifyPlugin = require('es3ify-webpack-plugin');
 
 const ROOT_PATH = path.resolve(__dirname, ".");
-const BUILD_PATH = path.resolve(ROOT_PATH, 'dist');
+const BUILD_PATH = path.resolve(ROOT_PATH, 'build');
 
 module.exports = {
     entry: {
+        // TODO
         polyfill : 'babel-polyfill',
         main : './src/index.js'
     },
@@ -20,41 +21,29 @@ module.exports = {
     },
     //如果不需要react这段可以去掉
     resolve: {
-        root : ['./scss'],
+        root : ['./src/scss'],
         extensions: ['', '.js', '.jsx'],
         alias: {
             "react": "anujs/dist/ReactIE.js",
             "react-dom": "anujs/dist/ReactIE.js",
             'prop-types': 'anujs/lib/ReactPropTypes',
             'devtools' : "anujs/lib/devtools",
-            'create-react-class': 'anujs/lib/createClass'
+            'create-react-class': 'anujs/lib/createClass',
+            '@': resolve('src')
         }
     },
     module: {
         loaders: [
             {test: /\.(js|jsx)(\?.*$|$)/,exclude: /node_modules/,loader: 'babel-loader'},
-            // {
-            //     test: /\.html$/,
-            //     loader: 'html-loader'
-            // },
-       /*     {
-                test: /\.(png|jpg|gif)$/,
-                loader: 'file-loader',
-                useRelativePath:true,
-                query:{
-                    name:'img/[name]-[hash:5].[ext]'  //这里img是存放打包后图片文件夹，结合publicPath来看就是/webBlog/build/img文件夹中，后边接的是打包后图片的命名方式。
-                }
-            },*/
             {
                 test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
                 loader: 'url-loader',
                 options: {
                     limit: 10000,
                     name: 'img/[name].[hash:8].[ext]',
-                    publicPath:"/anu-antd-axios-echarts-ie8/dist/"//处理css引用图片相对路径问题
+                    publicPath:"/anu-antd-axios-echarts-ie8/build/"//处理css引用图片相对路径问题
                 }
             },
-            // {test: /\.json$/,loader: "json"},
             {test: /\.css$/,loader: "style!css"},
             {test:/\.less$/,loader: 'style-loader!css-loader!less-loader'},
             {test: /\.scss$/,loader: ExtractTextPlugin.extract("style", "css?modules=true&sourceMap=true!postcss!sass", {publicPath: "./"})}
@@ -70,8 +59,24 @@ module.exports = {
     plugins: [
         new es3ifyPlugin(),
         new ExtractTextPlugin("./css/[name].[hash:5].css"),
-        new HtmlWebpackPlugin({template : "src/index.html",favicon:'./favicon.ico'}),
-        new webpack.optimize.UglifyJsPlugin({mangle : false, output : {keep_quoted_props:true}, compress : {properties:false, drop_console: true},comments:false}),
-        new CleanWebpackPlugin("dist", {root:ROOT_PATH})
-    ]
+        new HtmlWebpackPlugin({template : "src/index.html"}),
+        new CleanWebpackPlugin("build", {root:ROOT_PATH})
+    ],
+    devServer: {
+        disableHostCheck: true,
+        historyApiFallback: true,
+        progress: true,
+        outputPath : BUILD_PATH,
+        host : "localhost",
+        // host : "192.168.102.184",
+        port:8088,
+        proxy:{
+            "/api/*": {
+                target: "http://localhost:8099",
+                changeOrigin: true,
+                secure: true,
+            }
+        }
+    },
+    devtool: 'source-map'
 }

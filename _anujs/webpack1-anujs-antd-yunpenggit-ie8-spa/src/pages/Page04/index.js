@@ -11,7 +11,6 @@ import 'echarts/component/title';
 // const React = require( 'react-router');
 // import { browserHistory  } from 'react-router'
 //父组件向子组件传值
-
 class MyConyainer extends  React.Component{
     constructor(props){
         super(props);
@@ -136,7 +135,7 @@ class Page04 extends React.Component{
             />
             <Pagination size='small'  total={50} showSizeChanger showQuickJumper showTotal={this.showTotal} />
             </div>
-
+            
         );
     }
 }

@@ -177,7 +177,7 @@ antd@1.11.6:
     shallowequal "^0.2.2"
     warning "~3.0.0"
 
-anujs@^1.5.2:
+anujs@^1.3.2:
   version "1.5.2"
   resolved "https://registry.yarnpkg.com/anujs/-/anujs-1.5.2.tgz#9210be80500d48ffaf41588b5e027b532913c728"
   integrity sha512-wJb+zyJm8NzbPRMtFjiQDO2HsLrvzGaMRqU7fKDKwwxZhT6/mDBcjQNVx90tv0JIHZUPkoxzyQeNBvIgY5NSsQ==
@@ -1568,6 +1568,11 @@ console-control-strings@^1.0.0, console-control-strings@~1.1.0:
   resolved "https://registry.yarnpkg.com/console-control-strings/-/console-control-strings-1.1.0.tgz#3d7cf4464db6446ea644bf4b39507f9851008e8e"
   integrity sha1-PXz0Rk22RG6mRL9LOVB/mFEAjo4=
 
+console-polyfill@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/console-polyfill/-/console-polyfill-0.3.0.tgz#84900902a18c47a5eba932be75fa44d23e8af861"
+  integrity sha512-w+JSDZS7XML43Xnwo2x5O5vxB0ID7T5BdqDtyqT6uiCAX2kZAgcWxNaGqT97tZfSHzfOcvrfsDAodKcJ3UvnXQ==
+
 constants-browserify@0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/constants-browserify/-/constants-browserify-0.0.1.tgz#92577db527ba6c4cf0a4568d84bc031f441e21f2"
@@ -2038,6 +2043,11 @@ es3ify@0.2.x, es3ify@^0.2.2:
     esprima "^2.7.1"
     jstransform "~11.0.0"
     through "~2.3.4"
+
+es5-shim@^4.5.10:
+  version "4.5.13"
+  resolved "https://registry.yarnpkg.com/es5-shim/-/es5-shim-4.5.13.tgz#5d88062de049f8969f83783f4a4884395f21d28b"
+  integrity sha512-xi6hh6gsvDE0MaW4Vp1lgNEBpVcCXRWfPXj5egDvtgLz4L9MEvNwYEMdJH+JJinWkwa8c3c3o5HduV7dB/e1Hw==
 
 escape-html@~1.0.3:
   version "1.0.3"
