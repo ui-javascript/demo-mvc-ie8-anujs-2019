@@ -5,7 +5,7 @@ import './index.scss'
 class LoginUser extends Component {
   constructor () {
     super()
-    
+
     this.state = {
       schoolList: ['1', '2', '3']
     }
@@ -22,7 +22,9 @@ class LoginUser extends Component {
     })
   }
   handleForgetPassword () {}
-  handleSubmit () {}
+  handleSubmit () {
+      this.context.router.push('/')
+  }
 
   render () {
     return (
@@ -45,7 +47,7 @@ class LoginUser extends Component {
                 <Input type="password" size="large" placeholder="密码"/>
               </Form.Item>
               <Button className="w-12" size="large" type="primary">登录</Button>
-              <span class="f-12" onClick={this.handleForgetPassword}>忘记密码？</span>
+              <span class="f-12 mt-10" onClick={this.handleForgetPassword}>忘记密码？</span>
             </Form>
           </Tabs.TabPane>
           <Tabs.TabPane tab="快速登录" key="2">
@@ -57,7 +59,7 @@ class LoginUser extends Component {
                 <Input type="password" size="large" placeholder="密码"/>
               </Form.Item>
             </Form>
-            <Button className="w-12" size="large" type="primary">登录</Button>
+            <Button className="w-12" size="large" type="primary" onClick={this.handleSubmit}>登录</Button>
           </Tabs.TabPane>
         </Tabs>
       </Card>

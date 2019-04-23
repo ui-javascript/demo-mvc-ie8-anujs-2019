@@ -4,8 +4,9 @@ $head-height: 58px;
     position: fixed;
     top: 0;
     height: $head-height;
-    padding: 4px 36px;
+    padding: 4px 36px 4px 10px;
     z-index: 100;
+
     &-icon {
       height: 100%;
       float: left;
@@ -31,6 +32,3 @@ $head-height: 58px;
   }
 }
 
-.overhidden {
-  overflow: hidden;
-}

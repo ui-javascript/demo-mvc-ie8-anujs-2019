@@ -60,12 +60,13 @@ class LoginUser extends Component {
       schoolList: this.state.schoolList.filter(_ => _.includes(val))
     })
   }
+
   handleForgetPassword () {}
   handleSubmit () {}
 
   render () {
     return (
-    <div class="align-center">
+    <div class="align-center p-5">
       <img src={require('@/assets/student-logo.png')}/>
 
         <Table columns={columns} dataSource={data} scroll={{ x: 1500, y: 300 }} />

@@ -22,6 +22,7 @@ module.exports = {
   },
   resolve: {
     alias: {
+      //  anu替换react
       react: "anujs/dist/ReactIE.js",
       "react-dom": "anujs/dist/ReactIE.js",
       reach: "anujs/dist/Router.js",
@@ -63,5 +64,6 @@ module.exports = {
       }
     }]
   },
+  //  全局
   sassResources: ['./src/styles/vars.scss', './src/styles/mixins.scss']
 }
