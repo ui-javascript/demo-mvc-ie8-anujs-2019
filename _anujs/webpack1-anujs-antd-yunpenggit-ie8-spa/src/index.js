@@ -6,6 +6,7 @@ require('es5-shim/es5-sham')
 // require('babel-polyfill')
 require('console-polyfill')
 
+
 // 2. 样式
 import "./scss/common";
 
@@ -44,8 +45,8 @@ class App extends React.Component{
 
 // 6. 挂载
 ReactDOM.render(
-    // <Router history={hashHistory}>
-    <Router history={browserHistory}>
+    <Router history={hashHistory}>
+    {/*<Router history={browserHistory}>*/}
         <Route path="/" component={App}>
             <IndexRedirect to="/Index" />
             {/* 这块的注释一定要加外层大口号会有bug */}

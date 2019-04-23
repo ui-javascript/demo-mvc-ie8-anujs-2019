@@ -1,10 +1,11 @@
-const webpack = require('webpack'),
-    path = require('path'),
-    HtmlWebpackPlugin = require('html-webpack-plugin'),
-    ExtractTextPlugin = require("extract-text-webpack-plugin"),
-    CleanWebpackPlugin = require('clean-webpack-plugin'),
-    autoprefixer = require('autoprefixer'),
-    es3ifyPlugin = require('es3ify-webpack-plugin');
+const webpack = require('webpack')
+const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const ExtractTextPlugin = require("extract-text-webpack-plugin")
+const CleanWebpackPlugin = require('clean-webpack-plugin')
+const autoprefixer = require('autoprefixer')
+const es3ifyPlugin = require('es3ify-webpack-plugin')
+const UglifyJsPlugin = require("uglifyjs-webpack-plugin")
 
 const ROOT_PATH = path.resolve(__dirname, ".");
 const BUILD_PATH = path.resolve(ROOT_PATH, 'dist');
@@ -64,16 +65,18 @@ module.exports = {
         ],
         postLoaders: [
             {test: /\.(js|jsx)(\?.*$|$)/, loader: "es3ify-loader"},
-            {test: /\.(js|jsx)$/, loader: 'export-from-ie8/loader'}
+            // {test: /\.(js|jsx)$/, loader: 'export-from-ie8/loader'}
         ]
     },
     postcss: function () {
         return [autoprefixer];
     },
     plugins: [
+        new es3ifyPlugin(),
         new ExtractTextPlugin("./css/[name].[hash:5].css"),
         new HtmlWebpackPlugin({template: "src/index.html", favicon: './favicon.ico'}),
-        new es3ifyPlugin(),
+
+        // 其他项目的配置
         new webpack.optimize.UglifyJsPlugin({
             compress: {
                 properties: false,
@@ -91,6 +94,8 @@ module.exports = {
             },
             sourceMap: true
         }),
+
+        // 原来的配置
         // new webpack.optimize.UglifyJsPlugin({
         //     mangle: false,
         //     output: {
@@ -101,6 +106,67 @@ module.exports = {
         //         drop_console: true
         //     },
         //     comments: false
+        // }),
+        // anu官网说的配置
+        // new UglifyJsPlugin({
+        //     parallel: {
+        //         cache: true,
+        //         workers: 4,
+        //     },
+        //     uglifyOptions: {
+        //         mangle: {
+        //             eval: true,
+        //             toplevel: true,
+        //         },
+        //         parse: {
+        //             html5_comments: false,
+        //         },
+        //         output: {
+        //             comments: false,
+        //             ascii_only: true,
+        //             beautify: false,
+        //         },
+        //         ecma: 5,
+        //         ie8: false,
+        //         compresqs: {
+        //             properties: true,
+        //             unsafe: true,
+        //             unsafe_comps: true,
+        //             unsafe_math: true,
+        //             unsafe_proto: true,
+        //             unsafe_regexp: true,
+        //             unsafe_Func: true,
+        //             dead_code: true,
+        //             unused: true,
+        //             conditionals: true,
+        //             keep_fargs: false,
+        //             drop_console: true,
+        //             drop_debugger: true,
+        //             reduce_vars: true,
+        //             if_return: true,
+        //             comparisons: true,
+        //             evaluate: true,
+        //             booleans: true,
+        //             typeofs: false,
+        //             loops: true,
+        //             toplevel: true,
+        //             top_retain: true,
+        //             hoist_funs: true,
+        //             hoist_vars: true,
+        //             inline: true,
+        //             join_vars: true,
+        //             cascade: true,
+        //             collapse_vars: true,
+        //             reduce_vars: true,
+        //             negate_iife: true,
+        //             pure_getters: true,
+        //             pure_funcs: true,
+        //             // arrows: true,
+        //             passes: 3,
+        //             ecma: 5,
+        //         },
+        //     },
+        //     sourceMap: false,
         // }),
         new CleanWebpackPlugin("dist", {root: ROOT_PATH})
     ]

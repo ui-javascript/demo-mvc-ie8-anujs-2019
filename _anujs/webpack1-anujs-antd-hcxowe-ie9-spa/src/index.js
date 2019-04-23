@@ -1,23 +1,14 @@
-// import "./polyfill.js"
-
-// import $ from 'jquery'
-// import 'es5-shim'
-// import 'es5-shim/es5-sham'
-// import 'console-polyfill'
-// import 'babel-polyfill'
-// import 'media-match'
-//
-// window.$ = window.jQuery = $
-
-
+// 1. React
 import React from 'react'
 import ReactDOM from 'react-dom'
 import 'create-react-class'
 import { Router, Route, IndexRedirect, IndexRoute, Link, hashHistory } from 'react-router'
 
+// 2. 样式
 import './index.css'
 import './antd.css'
 
+// 3. 组件
 import Login from './components/Login'
 import Home from './components/Home'
 import ButtonView from './components/ButtonView'
@@ -47,6 +38,7 @@ class App extends React.Component {
     }
 }
 
+// 4. 挂载
 ReactDOM.render(
     <Router history={hashHistory}>
         <Route path="/" component={App}>

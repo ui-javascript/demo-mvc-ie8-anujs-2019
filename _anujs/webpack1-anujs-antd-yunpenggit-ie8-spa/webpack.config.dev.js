@@ -29,7 +29,7 @@ module.exports = {
             'prop-types': 'anujs/lib/ReactPropTypes',
             'devtools' : "anujs/lib/devtools",
             'create-react-class': 'anujs/lib/createClass',
-            '@': resolve('src')
+            // '@': path.resolve(__dirname, 'src')
         }
     },
     module: {
