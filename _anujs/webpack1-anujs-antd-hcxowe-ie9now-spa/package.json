@@ -4,11 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "install": "npm install",
+    "install:yarn": "yarn install",
     "remove": "rimraf node_modules",
+
     "dev": "webpack-dev-server --watch-poll --hot --inline --progress",
-    "dev:ie": "webpack-dev-server --watch-poll --progress",
-    "build": "webpack --config webpack.prod.config.js"
+    "dev:ie8": "webpack-dev-server --watch-poll --progress",
+    "build:dist": "webpack --config webpack.prod.config.js"
   },
   "keywords": [],
   "author": "",

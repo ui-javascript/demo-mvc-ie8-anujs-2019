@@ -27,7 +27,7 @@ module.exports = {
             "react-dom": "anujs/dist/ReactIE.js",
             'prop-types': 'anujs/lib/ReactPropTypes',
             'devtools' : "anujs/lib/devtools",
-            'create-react-class': 'anujs/lib/createClass'
+            'create-react-class': 'anujs/lib/createClass',
         }
     },
     module: {

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Logo from 'static/imgs/logo.jpg';
 
 export default class Header extends Component {
   editPersonInfo = () => {};
@@ -14,7 +13,7 @@ export default class Header extends Component {
         <div className="header">
           <div className="header_logo">
             <span>
-              <img src={Logo} alt="" />
+              <img src={require('/static/images/logo.jpg')} alt="" />
             </span>
             <span className="title">工业底片数字化智能云平台</span>
           </div>

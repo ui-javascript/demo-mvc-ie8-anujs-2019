@@ -35,7 +35,7 @@ class Home extends Component {
             <div class="home">
                 <div class="home-head">
                     <div class="home-head-icon">
-                        <img src={('../../static/logo.jpg')}/>
+                        <img src={('/static/images/logo.jpg')}/>
                     </div>
                     <Menu className="home-head-menu" mode="horizontal">
                         <Menu.SubMenu title="拉夫堡">

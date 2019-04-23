@@ -1,3 +1,15 @@
+// import "./polyfill.js"
+
+// import $ from 'jquery'
+// import 'es5-shim'
+// import 'es5-shim/es5-sham'
+// import 'console-polyfill'
+// import 'babel-polyfill'
+// import 'media-match'
+//
+// window.$ = window.jQuery = $
+
+
 import React from 'react'
 import ReactDOM from 'react-dom'
 import 'create-react-class'
@@ -56,6 +68,6 @@ ReactDOM.render(
                 <Route path="nav" component={NavView} />
             </Route>
         </Route>
-    </Router>, 
+    </Router>,
     document.getElementById("root")
 )

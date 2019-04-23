@@ -1,7 +1,9 @@
-import "../scss/common";
+import "./scss/common";
 import React from "react";
 import ReactDOM from "react-dom";
-import { Router, Route, IndexRedirect, IndexRoute, Link, hashHistory ,browserHistory } from 'react-router';
+React.createClass = require('create-react-class')
+
+import { Router, Route, IndexRedirect, IndexRoute, Link, hashHistory , browserHistory } from 'react-router';
 import {Navigation} from "./components";
 import Index from './pages/User/Index';
 import Login from './pages/User/Login';
@@ -13,6 +15,7 @@ import Page03 from './pages/Page03';
 import Page04 from './pages/Page04';
 import Page05 from './pages/Page05';
 import Add from './pages/Add';
+
 
 class App extends React.Component{
     render() {
@@ -28,8 +31,8 @@ class App extends React.Component{
 }
 
 ReactDOM.render(
-    // <Router history={hashHistory}>
-    <Router history={browserHistory}>
+    <Router history={hashHistory}>
+    {/*<Router history={browserHistory}>*/}
         <Route path="/" component={App}>
             <IndexRedirect to="/Index" />
             {/* 这块的注释一定要加外层大口号会有bug */}
@@ -48,3 +51,4 @@ ReactDOM.render(
     </Router>,
     document.getElementById("app")
 )
+

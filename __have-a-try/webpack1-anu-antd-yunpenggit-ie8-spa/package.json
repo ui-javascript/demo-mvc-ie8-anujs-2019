@@ -8,10 +8,11 @@
   "license": "",
   "scripts": {
     "install:npm": "npm install",
+    "install:yarn": "yarn install",
     "remove": "rimraf node_modules",
     "dev": "webpack-dev-server --config webpack.config.dev.js --watch-poll --hot --inline --progress --open",
     "dev:ie8": "webpack-dev-server --config webpack.config.dev.js --watch-poll --progress --open",
-    "build": "webpack --config webpack.config.prod.js"
+    "build:dist": "webpack --config webpack.config.prod.js"
   },
   "devDependencies": {
     "autoprefixer": "^7.2.4",
@@ -43,7 +44,7 @@
   },
   "dependencies": {
     "antd": "1.11.6",
-    "anujs": "^1.3.2",
+    "anujs": "^1.5.2",
     "axios": "^0.17.1",
     "babel-polyfill": "^6.26.0",
     "classnames": "^2.2.5",
