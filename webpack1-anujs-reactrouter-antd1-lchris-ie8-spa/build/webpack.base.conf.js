@@ -25,8 +25,8 @@ module.exports = {
       //  anu替换react
       react: "anujs/dist/ReactIE.js",
       "react-dom": "anujs/dist/ReactIE.js",
-      reach: "anujs/dist/Router.js",
-      rematch: "anujs/dist/Rematch.js",
+      // reach: "anujs/dist/Router.js",
+      // rematch: "anujs/dist/Rematch.js",
       'prop-types': 'anujs/lib/ReactPropTypes',
       'devtools' : "anujs/lib/devtools",
       'create-react-class': 'anujs/lib/createClass',

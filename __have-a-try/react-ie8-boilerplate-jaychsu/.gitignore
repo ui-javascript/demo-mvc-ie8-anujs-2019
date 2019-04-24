@@ -1,0 +1,13 @@
+# System Files
+.DS_Store
+
+# Compiled Dest
+dist
+
+# Node
+node_modules
+
+# Log and Report
+*.log
+jest
+coverage

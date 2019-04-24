@@ -1,0 +1,60 @@
+li.App__brand[role="menuitem"], 
+li.App__brand[role="menuitem"]:hover {
+    font-size: 20px;
+    border-bottom: 2px solid transparent;
+}
+li.App__brand[role="menuitem"] > a {
+    color: black;
+}
+:global(.ant-menu > .ant-menu-item).repo {
+    float: right;
+    border-bottom: 2px solid transparent;
+    padding: 0 10px;
+    font-size: 28px;
+}
+.Home {
+    margin-bottom: 16px;
+    text-align: center;
+}
+.Home__content {
+    display: inline-block;
+    font-size: 16px;
+}
+.Home__content > h3 {
+    margin-top: 16px;
+    text-align: center;
+}
+.Home__content > ul {
+    margin-top: 8px;
+    text-align: left;
+}
+.NotFound {
+    margin-top: 24px;
+    text-align: center;
+    font-size: 20px;
+}
+.Todo {
+    margin-top: 8px;
+}
+.Todo__btn-group {
+    margin-top: 8px;
+    text-align: center;
+}
+.Todo__btn-group > button {
+    margin-right: 8px;
+}
+.Conf__table {
+    border-spacing: 8px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.Conf__table > tr > td:first-child {
+    vertical-align: top;
+    text-align: right;
+}
+.Done {
+    margin-top: 8px;
+}
+.Done tr > td:first-child {
+    text-align: center;
+}
