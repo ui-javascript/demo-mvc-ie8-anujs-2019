@@ -1,0 +1,7 @@
+{{extend ("../../../layouts/base")}}
+
+{{#block ("body")}}
+    <div id="demo" class="demo">
+        
+    </div>
+{{/block}}

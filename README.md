@@ -1,18 +1,18 @@
 # README
 
-# 统一事项
+# 统一如下事项
 
-- 目前测试node.js: v10.15.1 --> 建议备注一下版本号
-- 尽量使用yarn安装 --> 不用因为更换了路径而重新安装依赖
-- 打包目录名统一为dist
-- 工程名格式统一
+- 测试node.js: v10.15.1 --> 建议备注一下版本号
+- 打包目录名为dist
+- 工程名格式
 
 ```
 构建工具v(webpack/gulp)
 + js-framework(react/vue) 
 + UI/技术特点(antd/elementui) 
 + author 
-(+ simple ) --> 尽量带UI示范，没有UI的加`simple`标识一下
+(+ simple ) --> 尽量带UI或场景示范，没有UI的加`simple`
+(+ old ) --> 技术栈太旧
 + 应用场景(h5/pc/IE8?) 
 + mpa/spa
 ```
@@ -26,6 +26,8 @@ npm run dev/serve/start
 # 打包
 npm run build/build:dist/dist
 ```
+
+- 尽量支持yarn安装 --> 这样不用因为更换了路径而重新安装依赖
 
 # TODO
 
@@ -56,18 +58,19 @@ npm run build/build:dist/dist
 # 怀疑人生
 
 ```
-以下操作仅当遇到坑的时候考虑一下, 实在不确定😂
+以下操作仅当遇到坑的时候考虑一下
+实在不确定😂
 ```
     
 - 用nvm切换版本之后, 环境上也许并没有彻底切换过来 --> 重装nodejs    
 - nodejs也许可以降到 v8.9.0 -> 可能webpack与node.js版本有关
 - yarn/npm/cnpm install 都试试看 
     
-    - --> 大概率npm安装是没问题的
+    - 大概率npm安装是没问题的
     - 不需要等安装命令彻底结束，可能就已经可以npm run dev了
-    - --> 记得翻墙Proxy
+    - 记得翻墙Proxy再安装
     
-- 不要用IDEA的命令行按钮直接运行  -> 可能有坑
+- 不要用IDEA的命令行按钮直接运行  -> 可能有坑, IDEA运行时要选择node版本
 
 
 
