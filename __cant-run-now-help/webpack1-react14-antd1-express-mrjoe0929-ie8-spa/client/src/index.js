@@ -13,7 +13,8 @@ import 'babel-polyfill';
 ReactDom.render(
     <BrowserRouter>
         <App/>
-    </BrowserRouter>,
+    </BrowserRouter>
+    ,
     document.getElementById('app')
 );
 

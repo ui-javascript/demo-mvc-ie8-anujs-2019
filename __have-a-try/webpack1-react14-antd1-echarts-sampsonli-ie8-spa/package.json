@@ -4,7 +4,7 @@
   "description": "春哥",
   "main": "./server.js",
   "scripts": {
-    "install": "npm install",
+    "install:cnpm": "cnpm install",
     "remove": "rimraf node_modules",
     "start": "cross-env NODE_ENV=production port=3000 node server.js",
     "dev": "cross-env NODE_ENV=development node server.js",
