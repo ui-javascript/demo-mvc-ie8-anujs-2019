@@ -1,0 +1,7 @@
+/*.direct-chat-contacts*/
+.direct-chat-contacts {
+  z-index: -1;
+}
+.direct-chat-contacts.zindex {
+  z-index: 1;
+}

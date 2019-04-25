@@ -1,0 +1,14 @@
+.carousel {
+  overflow: hidden;
+}
+
+.carousel-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.carousel-inner>.item {
+  display: block;
+  float: left;
+}

@@ -1,0 +1,4 @@
+/*Timeline*/
+.timeline>li>.timeline-item>.timeline-footer a {
+  margin-right: 3px;
+}
