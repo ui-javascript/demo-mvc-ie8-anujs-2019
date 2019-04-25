@@ -1,6 +1,7 @@
 ## 兼容 ie8 的 React 脚手架
 
 ### 程序命令
+
 - npm install 安装依赖
 - npm run dev 开发模式（热加载）
 - npm run build 项目打包

@@ -2,10 +2,29 @@
 
 # 统一事项
 
-- 尽量使用yarn安装 --> 不需要更换路径重新安装依赖
+- 尽量使用yarn安装 --> 不需要因为更换路径而重新安装依赖
 - 打包目录统一为dist
-- 命名格式
+- 工程命名格式
+
+```
+构建工具v 
++ js-framework 
++ UI/技术特点 
++ author 
++ 应用场景(h5/pc/IE?) 
++ mpa/spa
+```
+
 - 尽量带UI示范，没有UI的加`simple`标识
+- 命令
+
+```shell
+# 开发
+npm run dev/serve
+
+# 打包
+npm run build/dist
+```
 
 # TODO
 
@@ -39,9 +58,10 @@
 以下操作仅当遇到坑的时候考虑一下, 不确定😂
 ```
     
-- 不要用nvm切换版本 --> 可能环境上有点问题    
-- node版本可以降到 v8.9.0 -> 可能webpack与版本有关
-- 安装依赖时Proxy
+- yarn/npm/cnpm install 都试试看    
+- 用nvm切换版本之后, 环境上也许并没有彻底切换过来 --> nodejs重装    
+- nodejs也许可以降到 v8.9.0 -> 可能webpack与node.js版本有关
+- 安装依赖时记得翻墙Proxy
 - 不要用IDEA的命令行按钮直接运行  -> 可能有坑
 
 

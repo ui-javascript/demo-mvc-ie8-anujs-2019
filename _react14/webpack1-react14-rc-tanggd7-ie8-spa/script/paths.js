@@ -3,7 +3,7 @@ const path = require('path');
 module.exports = {
   appRoot: path.resolve(__dirname, '../'),
   appSrc: path.resolve(__dirname, '../src'),
-  appBuild: path.resolve(__dirname, '../build'),
+  appBuild: path.resolve(__dirname, '../dist'),
   appDev: path.resolve(__dirname, '../dev'),
   appCommunal: path.resolve(__dirname, '../src/components/communal'),
   appStatic: path.resolve(__dirname, '../src/static'),

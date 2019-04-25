@@ -44,7 +44,7 @@ const webpackConfig = webpackMerge(basicConfig, {
       copyUnmodified: true,
     }),
     // 清理dist文件夹
-    new CleanWebpackPlugin(['build'], {
+    new CleanWebpackPlugin(['dist'], {
       root: paths.appRoot,
       verbose: false,
     }),
