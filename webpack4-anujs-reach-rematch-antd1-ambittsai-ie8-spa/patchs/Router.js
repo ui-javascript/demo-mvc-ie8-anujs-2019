@@ -689,7 +689,9 @@
                           if (fn) {
                               fn(event);
                           }
-                          event.preventDefault();
+                          // TODO 不注释掉这一句 不能正常点击菜单
+                          // event.preventDefault();
+
                           if (shouldNavigate(event)) {
                               event.preventDefault();
                               navigate$$1(href, { state: state, replace: replace });

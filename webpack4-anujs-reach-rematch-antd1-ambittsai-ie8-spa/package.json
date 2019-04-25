@@ -5,16 +5,17 @@
   "author": "ambit_tsai@qq.com",
   "license": "MIT",
   "scripts": {
+    "install:cnpm": "cnpm install",
     "install:yarn": "yarn install",
     "remove": "rimraf node_modules",
 
-    "dev": "npm run dev:css && npm run dev:shim && npm run dev:polyfill && npm run dev:dll && npm run dev:index",
+    "dev": "set NODE_ENV=development&& webpack-dev-server --config ./scripts/index.js",
+    "dev:patchs": "npm run dev:css && npm run dev:shim && npm run dev:polyfill && npm run dev:dll && npm run dev:index",
     "dev:css": "node ./scripts/css.js",
     "dev:shim": "set NODE_ENV=development&& node ./scripts/shim.js",
     "dev:polyfill": "set NODE_ENV=development&& node ./scripts/polyfill.js",
     "dev:dll": "set NODE_ENV=development&& webpack --config ./scripts/dll.js",
     "dev:index": "set NODE_ENV=development&& webpack --config ./scripts/index.js",
-    "dev-server": "set NODE_ENV=development&& webpack-dev-server --config ./scripts/index.js",
 
     "build": "npm run build:css && npm run build:shim && npm run build:polyfill && npm run build:dll && npm run build:index",
     "build:css": "node ./scripts/css.js",

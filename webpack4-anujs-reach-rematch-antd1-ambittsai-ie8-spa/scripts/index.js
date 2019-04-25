@@ -109,7 +109,11 @@ module.exports = {
 				output: {
 					beautify: true,
 				},
-			},
+                compressor: {
+                    drop_console: true,
+                    drop_debugger: true,
+                }
+            },
 		}),
 		new CopyWebpackPlugin([{
 			context: ROOT,

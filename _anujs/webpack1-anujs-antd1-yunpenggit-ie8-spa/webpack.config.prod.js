@@ -128,7 +128,7 @@ module.exports = {
         //         },
         //         ecma: 5,
         //         ie8: false,
-        //         compresqs: {
+        //         compressor: {
         //             properties: true,
         //             unsafe: true,
         //             unsafe_comps: true,

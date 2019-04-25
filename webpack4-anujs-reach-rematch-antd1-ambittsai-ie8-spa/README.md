@@ -3,6 +3,30 @@
 # Reactie
 This solution will show you how to use `React` stack in IE8, then you don't have to change the technology stack when the customer uses legacy browser. It uses ES6, Webpack, Babel, ESLint, Ant Design 1.x, React 16, Reach, Rematch, etc. See <a href="https://ambit-tsai.github.io/reactie/" target="_blank">Reactie Todo</a>.
 
+# Run
+
+```shell
+npm run dev:patchs
+npm run dev
+
+# /patchs/Router.js
+anchorProps.onClick = function (event) {
+  if (fn) {
+      fn(event);
+  }
+  // TODO 
+  // 不注释掉这一句 不能正常点击菜单
+  // event.preventDefault();
+
+  if (shouldNavigate(event)) {
+      event.preventDefault();
+      navigate$$1(href, { state: state, replace: replace });
+  }
+};
+
+npm run build
+```
+
 
 #### Shim & Polyfill
 Choose the shims and polyfills you need.
