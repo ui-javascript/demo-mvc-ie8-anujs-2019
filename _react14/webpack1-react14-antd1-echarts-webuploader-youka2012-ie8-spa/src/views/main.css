@@ -1,0 +1,32 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background-color: #1b579a;
+}
+
+#app{
+    min-height: 100%;
+    position: relative;
+    box-sizing: border-box;
+    padding-bottom: 0;
+    background-color: #ececec;
+}
+.main-body{
+    min-height: 100%;
+}
+#main{
+    min-height: 100%;
+    padding-bottom: 60px;
+}
+.ant-form-item-control{
+    line-height: normal;
+}
+.ant-radio-group{
+    line-height: 28px;
+}
+.ant-checkbox-group{
+    line-height: 28px;
+}
+
+

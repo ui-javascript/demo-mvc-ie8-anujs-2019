@@ -1,0 +1,14 @@
+.left-menu{
+    float: left;
+    width: 240px;
+    margin-right: -240px;
+}
+.main-contain{
+    float: left;
+    width: 100%;
+    margin-left: 240px;
+    min-height: 700px;
+    border-left: solid 1px #009688;
+}
+.main-frame{
+}

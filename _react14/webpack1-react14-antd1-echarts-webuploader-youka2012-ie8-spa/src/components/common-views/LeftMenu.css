@@ -1,0 +1,22 @@
+.left-menu > .ant-menu > .ant-menu-submenu > .ant-menu-submenu-title {
+    padding-left: 36px !important;
+    font-size: 13px;
+}
+
+.left-menu > .ant-menu > .ant-menu-item {
+    padding-left: 36px !important;
+    font-size: 13px;
+}
+
+.left-menu > .ant-menu > .ant-menu-submenu > .ant-menu-sub > .ant-menu-item {
+    padding-left: 51px !important;
+}
+
+.left-menu-wrapper {
+    background-color: #ffaa00;
+    font-size: 14px;
+}
+
+a {
+    color: #666;
+}

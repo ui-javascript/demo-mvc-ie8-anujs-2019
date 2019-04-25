@@ -1,0 +1,29 @@
+.api-test{
+    padding: 2px;
+    position: fixed;
+    right: 30px;
+    bottom: 50px;
+    width: 960px;
+    max-height: 950px;
+    overflow-y: auto;
+    background-color: #ccc8e8;
+    font-size: 26px;
+}
+.api-test-icon{
+    padding: 0 12px;
+    position: absolute;
+    right: 30px;
+    bottom: 50px;
+    width: 50px;
+    max-height: 50px;
+    background-color: #ccc8e8;
+    cursor: pointer;
+    font-size: 26px;
+}
+.api-test:hover{
+    background-color: #2bd7f5;
+}
+.api-test-icon-close{
+    cursor: pointer;
+    font-size: 26px;
+}

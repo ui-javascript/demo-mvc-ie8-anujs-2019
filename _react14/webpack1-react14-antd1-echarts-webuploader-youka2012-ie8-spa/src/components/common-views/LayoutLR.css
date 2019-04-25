@@ -1,0 +1,17 @@
+.main-wrapper{
+    overflow: hidden;
+}
+.left-menu{
+    padding-top: 6px;
+    float: left;
+    width: 240px;
+    /*margin-right: -240px;*/
+}
+.main-contain{
+    /*float: left;*/
+    margin-left: 244px;
+    min-height: 700px;
+    border-left: solid 6px #ececec;
+}
+.main-frame{
+}

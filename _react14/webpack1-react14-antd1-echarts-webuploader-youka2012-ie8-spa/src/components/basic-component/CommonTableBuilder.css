@@ -1,0 +1,19 @@
+.main-wrapper{
+}
+.right-wrapper{
+    padding: 6px 4px;
+}
+table td{
+    text-align: center;
+}
+table th{
+    text-align: center !important;
+}
+.detail-label{
+    margin-right: 14px;
+    color:#009688;
+    min-width:80px;
+}
+.common-table-action-item{
+    margin-left: 6px;
+}

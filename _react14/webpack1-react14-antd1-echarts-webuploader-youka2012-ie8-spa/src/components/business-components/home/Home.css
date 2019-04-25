@@ -1,0 +1,58 @@
+.home-wrap {
+    margin: 0 15%;
+}
+p{
+    font-size: 13px;
+    line-height: 20px;
+    margin-top: 4px;
+}
+.introduce-wrap{
+    margin-top: 18px;
+}
+.contract-wrap {
+    margin-top: 18px;
+}
+
+.contact-table {
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    margin: auto;
+    padding: auto;
+    background-color: #0c4361;
+}
+
+.contact-table  > tbody{
+    background-color: #eeeeee;
+}
+
+.contact-table > thead > tr > td {
+    width: 33%;
+    background-color: #0c4361;
+    color: #fff;
+}
+
+.contact-table > tbody > tr > td {
+    width: 33%;
+}
+
+.article-wrap {
+    margin-top: 18px;
+}
+.more-article{
+   color: #009688;
+}
+.more-article {
+    font-size: 14px;
+}
+.more-article-modal{
+    top:20px;
+    margin:0 auto;
+}
+.article-body{
+    padding: 2px 6px;
+}
+.article-body p a{
+    font-size: 14px;
+    color: #26404d;
+}

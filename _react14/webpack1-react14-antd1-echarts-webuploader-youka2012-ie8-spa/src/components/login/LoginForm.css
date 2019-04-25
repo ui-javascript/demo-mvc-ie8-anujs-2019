@@ -1,0 +1,42 @@
+.login-box {
+    background: url("../../assets/url-img/login/login_bg.png") no-repeat;
+    text-align: center;
+    height: 100%;
+}
+
+.login-box-title {
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.login-card-content {
+    padding: 36px 45px;
+}
+
+.login-verify-img {
+    width: 110px;
+    height: 32px;
+}
+
+.login-button {
+    color: #ffffff;
+}
+
+.login-submit-button {
+    color: #fff;
+    border-color: #57c5f7;
+}
+
+.login-input{
+    border-radius: 0;
+}
+
+.login-password-button {
+     color: #fff;
+     border-color: #195393;
+ }
+.login-password-button:hover {
+    color: #ff7733;
+    border-color: #ff5500;
+}

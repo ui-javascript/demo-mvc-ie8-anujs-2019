@@ -1,0 +1,89 @@
+.font-14{
+    font-size: 14px;
+}
+.ant-menu-horizontal>.ant-menu-item:hover,.ant-menu-dark .ant-menu-item-selected{
+    /*background-color: #1a211d;*/
+    background-color: #205671;
+}
+.ant-menu-item{
+    transition: all .2s ease;
+}
+.ant-menu-horizontal{
+    border-bottom: none;
+}
+
+.ant-menu-vertical>.ant-menu-item{
+    padding:0 16px 0 16px;
+}
+
+.header-wrap{
+    /*background-color: #404040;*/
+    /*background-color: #1b5293;*/
+    height: 80px;
+    position: relative;
+    background: url("../../assets/url-img/login/header_bg.jpg") no-repeat;
+}
+.header-title{
+    color:#bbc9cd;
+    font-size: 24px;
+    font-weight: 500;
+    font-family: "Microsoft Yi Baiti";
+    position: absolute;
+    top:20px;
+    left: 10px;
+}
+.tab-wrap{
+    padding-top: 35px;
+    overflow: hidden;
+}
+
+.header-menu-wrap{
+    float: right;
+    margin-right: 12px;
+}
+
+.right-dropmenu-wrap{
+    text-align: center;
+    margin-top: 32px\9;
+    margin-left: -38px\9;
+}
+@-moz-document url-prefix() {
+    .right-dropmenu-wrap{
+        margin-top: 9px;
+        margin-left: 57px;
+    }
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    .right-dropmenu-wrap{
+        margin-top: 9px;
+        margin-left: 57px;
+    }
+}
+
+.header-menu{
+    background-color: #042e47;
+}
+
+.header-right-drop{
+    background-color: #1b5293;
+}
+
+.header-right-drop-text{
+    color:#f4f4f4 !important;
+}
+.header-right-drop-text:hover{
+    color:#666 !important;
+}
+
+.right-drop-wrap{
+    float: right;
+    margin-top: 10px;
+    margin-right: 22px;
+    color: #fff;
+}
+
+.ant-dropdown-link{
+    width: 200px;
+    font-size: 16px;
+    color: #4ce8da !important;
+}
