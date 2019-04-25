@@ -2,24 +2,22 @@
 
 # 统一事项
 
-- node.js: v10.15.1
-- 尽量使用yarn安装 --> 不需要因为更换路径而重新安装依赖
+- 目前测试node.js: v10.15.1 --> 建议备注一下版本号
+- 尽量使用yarn安装 --> 不用因为更换了路径而重新安装依赖
 - 打包目录名统一为dist
 - 工程名格式统一
 
 ```
-构建工具v 
-+ js-framework 
-+ UI/技术特点 
+构建工具v(webpack/gulp)
++ js-framework(react/vue) 
++ UI/技术特点(antd/elementui) 
 + author 
-+ 应用场景(h5/pc/IE?) 
+(+ simple ) --> 尽量带UI示范，没有UI的加`simple`标识一下
++ 应用场景(h5/pc/IE8?) 
 + mpa/spa
-
-尽量带UI示范，
-没有UI的加`simple`标识一下
 ```
 
-- 命令行统一
+- 命令行
 
 ```shell
 # 开发
