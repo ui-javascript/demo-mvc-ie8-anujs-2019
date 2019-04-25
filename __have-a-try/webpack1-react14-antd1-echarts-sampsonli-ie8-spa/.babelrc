@@ -1,0 +1,25 @@
+{
+  "presets": [
+    [
+      "env",
+      {
+        "loose": true,
+        "module": false,
+        "targets": {
+          "browsers": [
+            "ie >= 8",
+            "Chrome >= 21",
+            "Firefox >= 1",
+            "Edge >= 13",
+            "last 3 versions"
+          ]
+        }
+      }
+    ],
+    "react",
+    "stage-2"
+  ],
+  "plugins": [
+    "add-module-exports","transform-runtime", "transform-regenerator", "transform-decorators-legacy", "dynamic-import-webpack"
+  ]
+}

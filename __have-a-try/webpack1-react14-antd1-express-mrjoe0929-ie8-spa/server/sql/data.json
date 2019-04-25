@@ -1,0 +1,27 @@
+[
+    {
+        "key": "1001",
+        "custName": "北京一号公司",
+        "ID": "11252412524156AS",
+        "custType": "法人",
+        "progress": 20
+    },{
+        "key": "1003",
+        "custName": "北京三号公司",
+        "ID": "11252412524156AS",
+        "custType": "法人",
+        "progress": 80
+    },{
+        "key": "1002",
+        "custName": "北京二号公司",
+        "ID": "11252412524156AS",
+        "custType": "法人",
+        "progress":100
+    },{
+        "key": "1004",
+        "custName": "北京四号公司",
+        "ID": "11252412524156AS",
+        "custType": "法人",
+        "progress": 0
+    }
+]
