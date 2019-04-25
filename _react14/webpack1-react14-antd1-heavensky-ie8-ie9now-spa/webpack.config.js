@@ -31,11 +31,13 @@ const currentConfig = require(isProd ? "./webpack.cfg" : "./webpack.cfg.dev");
 const commonConfig = {
 	entry: {
 		shim: [
-			"es5-shim", // 支持 IE8 所必须,且顺序在babel-polyfill前
+            // 支持 IE8 所必须,且顺序在babel-polyfill前
+			"es5-shim",
 			"es5-shim/es5-sham",
 			"console-polyfill",
 			"babel-polyfill",
-			"media-match", // 支持 antd 所必须
+            // 支持 antd 所必须
+			"media-match",
 		],
 		public: [
 			dir("src/utils/public.js"),
@@ -151,7 +153,8 @@ const addPagePlugin = name => {
 			filename: app + ".html",
 			template: dir("src/index.html"),
 			title: "Home Page " + app,
-			chunks: ["manifest", "runtime", "shim", "public", app],
+			// chunks: ["manifest", "runtime", "shim", "public", app],
+			chunks: ["manifest", "runtime", "public", app],
 			chunksSortMode: "manual",
 			inject: true,
 			xhtml: true,

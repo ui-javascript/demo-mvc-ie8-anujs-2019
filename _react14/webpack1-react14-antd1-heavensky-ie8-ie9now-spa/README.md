@@ -1,3 +1,13 @@
+# README
+
+```
+比较诡异
+之前试过的可以兼容IE8
+但是会有一些报错
+
+现在经打包测试 IE9+
+```
+
 # webpack1-ie8
 采用 `React` 和 `Ant Design` 兼容到浏览器 `IE8` 的 `demo` 例子.
 * 采用低版本兼容的 `dependency` 有 `react@0.x` `antd@1.x` `jquery@1.x`

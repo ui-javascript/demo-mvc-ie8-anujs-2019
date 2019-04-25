@@ -6,9 +6,11 @@
 	"author": "HeavenSky",
 	"description": "study react antd ie8",
 	"scripts": {
-		"install:cnpm": "cnpm install",
+		"install": "npm install",
 		"remove": "rimraf node_modules",
+
 		"start": "cross-env NODE_ENV=development webpack-dev-server --cache --colors --profile --progress -d",
+		"dev": "npm run start",
 		"dev@doubt": "cross-env NODE_ENV=development webpack --cache --colors --profile --progress --hide-modules",
 		"build": "cross-env NODE_ENV=production webpack --cache --colors --profile --progress --hide-modules"
 	},
