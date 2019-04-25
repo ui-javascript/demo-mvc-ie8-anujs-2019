@@ -1,1 +1,4 @@
 /node_modules
+
+# 这里的dist是代码之一
+!public/dist
