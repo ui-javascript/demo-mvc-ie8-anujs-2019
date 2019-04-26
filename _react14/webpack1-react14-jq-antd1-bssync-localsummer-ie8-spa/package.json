@@ -13,13 +13,13 @@
     "eslint": "eslint src/**/*.js tools/**/*.js",
     "stylelint": "stylelint src/components/**/*.css src/routes/**/*.css",
     "lint": "npm run eslint && npm run stylelint",
-    "test": "mocha --compilers js:babel-register",
-    "test:watch": "mocha --compilers js:babel-register --reporter min --watch",
     "clean": "node tools/clean",
+    "start": "node tools/start",
+    "dev": "npm run start",
     "build": "node tools/build --release",
     "build:debug": "node tools/build",
-    "start": "node tools/start",
-    "dev": "npm run start"
+    "test": "mocha --compilers js:babel-register",
+    "test:watch": "mocha --compilers js:babel-register --reporter min --watch"
   },
   "dependencies": {
     "@rematch/core": "^0.6.0",
