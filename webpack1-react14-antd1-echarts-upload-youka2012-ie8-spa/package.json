@@ -6,6 +6,7 @@
   "author": "ma_chao",
   "description": "react antd ie8",
   "scripts": {
+    "install:yarn": "yarn install",
     "install": "npm install",
     "remove": "rimraf node_modules",
 

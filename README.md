@@ -63,14 +63,15 @@ npm run build/build:dist/dist
 ```
     
 - 用nvm切换版本之后, 环境上也许并没有彻底切换过来 --> 重装nodejs    
-- nodejs也许可以降到 v8.9.0 -> 可能webpack与node.js版本有关
+- nodejs也许可以降到老版本eg. v8.9.0 -> 可能webpack与node.js版本有关
 - yarn/npm/cnpm install 都试试看 
     
     - 大概率npm安装是没问题的
     - 不需要等安装命令彻底结束，可能就已经可以npm run dev了
+    - 但有几个老项目哪怕最终报错也一定要等它安装完
     - 记得翻墙Proxy再安装
     
-- 不要用IDEA的命令行按钮直接运行  -> 可能有坑, IDEA运行时要选择node版本
+- 不要用IDEA的命令行按钮直接运行  -> IDEA运行前要配置对应node版本
 
 
 
