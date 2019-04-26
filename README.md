@@ -2,7 +2,7 @@
 
 # 统一如下事项
 
-- 测试node.js: v10.15.1 --> 建议备注一下版本号
+- 测试node.js: v10.15.3 --> 建议备注一下版本号
 - 打包目录名为dist
 - 工程名格式
 
@@ -27,7 +27,7 @@ npm run dev/serve/start
 npm run build/build:dist/dist
 ```
 
-- 尽量支持yarn安装 --> 这样不用因为更换了路径而重新安装依赖
+- 尽量支持yarn/高版本npm安装 --> 这样不用因为更换了路径而重新安装依赖
 
 # TODO
 
