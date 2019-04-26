@@ -1,3 +1,7 @@
+/**
+ * Antd功能
+ */
+
 import { verIE } from "./fns";
 
 const horizontalScroll = e => {

@@ -1,3 +1,9 @@
+/**
+ * 生成<script></script>
+ * @param url
+ * @param callback
+ * @returns {Promise<any>}
+ */
 const scriptLoader = (url, callback) => {
     let script = document.createElement('script');
     script.id = url;
@@ -18,6 +24,8 @@ const scriptLoader = (url, callback) => {
             callback && callback();
         }
     };*/
+
+
     const resultPromise = new Promise((resolve,reject)=>{
         const doOnLoad = () => {
             if (!supportLoad && !timeID && /complete|loaded/.test(script.readyState)) {

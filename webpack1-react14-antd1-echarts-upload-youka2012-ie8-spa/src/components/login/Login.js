@@ -40,7 +40,7 @@ class Login extends Component {
                 <ul className='login-footer'>
                     <li>Powered by ChenHua Technology</li>
                     <li>电话：021-00000000</li>
-                    <li>@2018 上海辰华网络技术服务有限公司</li>
+                    <li>@2018 xxx技术支持公司</li>
                 </ul>
             </div>
         );

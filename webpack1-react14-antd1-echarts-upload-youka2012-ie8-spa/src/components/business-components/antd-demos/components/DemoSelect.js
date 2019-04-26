@@ -206,7 +206,7 @@ class MyComponent extends Component {
 
     render() {
         return (
-            <div>
+            <div className="p-10">
                 <div id="echarts-test" style={{height: "500px", width: "700px"}}/>
             </div>
         )

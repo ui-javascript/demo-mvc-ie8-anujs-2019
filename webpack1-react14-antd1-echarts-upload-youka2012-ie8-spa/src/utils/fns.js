@@ -1,5 +1,12 @@
+/**
+ * 1.CASE 大小写
+ */
 export const lower = v => String(v).toLowerCase();
 export const upper = v => String(v).toUpperCase();
+
+/**
+ * 2.TYPE 获取/判断类型
+ */
 export const getType = v => ({}).toString.call(v).slice(8, -1);
 export const isMap = v => getType(v) === "Map";
 export const isSet = v => getType(v) === "Set";
@@ -22,6 +29,10 @@ export const isNum = v =>
 export const isInt = v =>
 	["number", "string"].includes(typeof v) &&
 	/^\s*(?:\+|-)?\s*\d+\s*$/.test(v);
+
+/**
+ * 3. VALIDATE 校验
+ */
 // 若存在类型转换一定要小心,比如:{valueOf:v=>2}=="2"=={toString:v=>2};isFinite会转换类型,Number.isFinite不会转换类型
 export const regCheck = (v, ok, no) => {
 	let check = false;
@@ -47,6 +58,7 @@ export const regCheck = (v, ok, no) => {
 	}
 	return check;
 };
+
 // 邮箱 name@domain name规则:最多64个字符 domain规则:必须为顶级域名,域名后缀2-6个字符
 // http://faqs.org/rfcs/rfc1035.html 域名限制
 // labels:63 octets or less;names:255 octets or less
@@ -104,6 +116,13 @@ export const validator = (rule, value, callback) => {
 	}
 	callback(err);
 };
+
+
+/**
+ *
+ * @param fn
+ * @returns {Promise<any>}
+ */
 export const lazyFn = fn =>
 	// eslint-disable-next-line promise/avoid-new
 	new Promise(
@@ -113,6 +132,7 @@ export const lazyFn = fn =>
 			)
 		)
 	);
+
 export const tryJSON = str => {
 	let res;
 	try {
@@ -134,6 +154,9 @@ export const tryEVAL = str => {
 	}
 	return res;
 };
+
+
+
 export const verIE = () => {
 	// 返回值{ver:IE版本,mod:文档模式版本}, 只能获取11以下的版本信息
 	const isIE = tryEVAL("/*@cc_on !@*/false");
@@ -199,6 +222,8 @@ export const verClient = () => {
 	}
 	return res;
 };
+
+
 export const urlArgs = (v, b) => {
 	// b==false,返回值{args:URL中的参数,hash:URL中的哈希,main:URL中的主体}
 	// b==true,逆向操作
@@ -247,6 +272,8 @@ export const urlArgs = (v, b) => {
 		return obj;
 	}
 };
+
+
 const HTTP = "http://";
 const HTTPS = "https://";
 export const URL_SELECT = {

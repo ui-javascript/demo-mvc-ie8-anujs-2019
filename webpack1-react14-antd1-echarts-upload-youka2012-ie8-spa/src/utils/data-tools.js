@@ -1,5 +1,21 @@
-export const arrayToTree = function (_data, id, pid, childrenName, itemMap)      //将ID、ParentID这种数据格式转换为树格式
+/**
+ * 将ID、ParentID这种数据格式转换为树格式
+ *
+ * @param _data
+ * @param id
+ * @param pid
+ * @param childrenName
+ * @param itemMap
+ * @returns {Array}
+ */
+export const arrayToTree = function (_data, id, pid, childrenName, itemMap)
 {
+
+    function getKey(key) {
+        if (typeof (key) == "string") key = key.replace(/[.]/g, '').toLowerCase();
+        return key;
+    }
+
     var id = id || "id";
     var pid = pid || "parent_id";
     var childrenName = childrenName || "children";
@@ -27,9 +43,4 @@ export const arrayToTree = function (_data, id, pid, childrenName, itemMap)     
         // data[i] = null;
     }
     return targetData;
-
-    function getKey(key) {
-        if (typeof (key) == "string") key = key.replace(/[.]/g, '').toLowerCase();
-        return key;
-    }
 };

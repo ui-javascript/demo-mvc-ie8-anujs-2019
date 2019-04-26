@@ -3,7 +3,7 @@ import {Menu, Dropdown, Icon} from 'antd';
 import {Link, withRouter} from "react-router-dom";
 import Cookies from 'js-cookie';
 import myAxios from '../../utils/myAxios'
-import "./Header.css"
+import "./Header.less"
 
 class HeaderMenuWrap extends Component {
     constructor(props) {
@@ -95,9 +95,11 @@ class Header extends Component {
         const userName = userCode ? userCode : '';
         return (
             <div className="header-wrap">
-                <span className="header-title"></span>
-                <div className="tab-wrap"><RightDrop userName={userName} history={this.props.history}/>
-                    <HeaderMenu/>
+                <div className="header-wrap__container">
+                    <span className="header-title"></span>
+                    <div className="tab-wrap"><RightDrop userName={userName} history={this.props.history}/>
+                        <HeaderMenu/>
+                    </div>
                 </div>
             </div>
         );
