@@ -1,0 +1,18 @@
+// https://palantir.github.io/tslint/rules/
+{
+  "rulesDirectory": ["tslint-plugin-prettier"],
+  "extends": [
+    "tslint:latest",
+    "tslint-config-prettier"
+  ],
+  "rules": {
+    "prettier": true,
+
+    /* custom rules */
+    "object-literal-sort-keys": false,
+    "ordered-imports": false,
+    "member-access": [true, "check-accessor"],
+    "no-bitwise": false,
+    "no-console": false
+  }
+}
