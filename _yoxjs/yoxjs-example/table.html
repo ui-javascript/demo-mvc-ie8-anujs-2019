@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo</title>
+</head>
+<body>
+    <div id="app"></div>
+    <script id="template" type="plain/text">
+
+        <div>
+          <table>
+            <tr>
+              <th>th</th>
+            </tr>
+            <tr>
+              <td>1 < 2</td>
+            </tr>
+          </table>
+        </div>
+
+    </script>
+    <script src="https://unpkg.com/yox"></script>
+    <script>
+        var instance = new Yox({
+            el: '#app',
+            template: '#template',
+            data: {
+
+            },
+        });
+
+    </script>
+</body>
+</html>

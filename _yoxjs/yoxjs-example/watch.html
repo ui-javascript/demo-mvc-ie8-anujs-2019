@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo</title>
+</head>
+<body>
+    <div id="app"></div>
+    <script src="https://unpkg.com/yox"></script>
+    <script>
+        var instance = new Yox({
+            el: '#app',
+            data: {
+                name: '',
+                user: {
+                    name: 'musicode'
+                },
+                users: [
+                    {
+                        name: 'Jake',
+                        checked: true,
+                    },
+                    {
+                        name: 'John',
+                        checked: false,
+                    },
+                    {
+                        name: 'Mike'
+                    }
+                ]
+            },
+            template: '<div></div>',
+            watchers: {
+                'user.name': {
+                    sync: true,
+                    watcher: function () {
+                        console.log('user.name', arguments);
+                    }
+                },
+                'users.*.name': function (newValue, oldValue, keypath, index) {
+                    console.log('users.*.name', arguments);
+                    this.toggle('users.' + index + '.checked');
+                },
+                'user.**': function () {
+                    console.log('user.**', arguments);
+                },
+                '**': function () {
+                    console.log('**', arguments);
+                },
+                '*': function () {
+                    console.log('*', arguments);
+                },
+                'users.*.checked': {
+                    watcher: function () {
+                        console.log('users.*.checked', arguments)
+                    }
+                },
+                'users.1.checked': {
+                    watcher: function () {
+                        console.log('users.1.checked', arguments)
+                    }
+                },
+                'user.age': {
+                    watcher: function () {
+                        console.log('user.age', arguments)
+                    }
+                },
+                'user.gender': {
+                    sync: true,
+                    watcher: function () {
+                        console.log('user.gender', arguments)
+                    }
+                }
+            },
+            afterUpdate: function () {
+                console.log('');
+                console.log('');
+                console.log('');
+            }
+        });
+
+    </script>
+</body>
+</html>

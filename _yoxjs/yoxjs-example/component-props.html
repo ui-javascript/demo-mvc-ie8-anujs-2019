@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>组件数据流</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="app"></div>
+    <script id="template1" type="plain/text">
+      <div id="custom-component">
+          {{minVersion}}-{{targetVersion}}
+          name: {{name}}
+          <br>
+          age: {{age}}
+          <br>
+          name: {{user.name}}
+          <br>
+          age: {{user.age}}
+          <button on-click="fireIncrease()">
+              increase
+          </button>
+      </div>
+    </script>
+    <script id="template2" type="plain/text">
+      <div id="root">
+          <input ref="input" model="title" style="font-size: 18px;color: red;">
+          <Custom1 ref="child" name="123{{name}}" age="{{user.age}}{{#if user.age}}1{{/if}}" user="{{user}}" {{...info}} />
+          <Custom2 user="{{user}}" {{...user}} />
+      </div>
+    </script>
+    <script src="./libs/standard/dev/yox.js"></script>
+    <script>
+
+        var Custom = {
+            template: '#template1',
+            methods: {
+                fireIncrease: function () {
+                    this.fire('increase');
+                }
+            },
+            beforeCreate: function (options) {
+                console.log('    beforeCreate', options);
+            },
+            afterCreate: function () {
+                console.log('    afterCreate');
+            },
+            beforeMount: function () {
+                console.log('    beforeMount');
+            },
+            afterMount: function () {
+                console.log('    afterMount');
+            },
+            beforeUpdate: function () {
+                console.log('    beforeUpdate');
+            },
+            afterUpdate: function () {
+                console.log('    afterUpdate');
+            },
+            beforeDestroy: function () {
+                console.log('    beforeDestroy');
+            },
+            afterDestroy: function () {
+                console.log('    afterDestroy');
+            }
+        };
+
+        var instance = new Yox({
+            el: '#app',
+            data: {
+                title: 'yox',
+                user: {
+                    name: 'Jake',
+                    age: 0,
+                },
+                info: {
+                    minVersion: 1,
+                    targetVersion: 2,
+                }
+            },
+            template: '#template2',
+            components: {
+                Custom1: function (callback) {
+                    setTimeout(
+                        function () {
+                            callback(Custom)
+                        },
+                        6000
+                    );
+                },
+                Custom2: {
+                    template: '<Custom {{...this}} />',
+                    components: {
+                        Custom: Custom,
+                    }
+                }
+            },
+            events: {
+                increase: function (e) {
+                    this.increase('user.age')
+                },
+            },
+            beforeCreate: function (options) {
+                console.log('beforeCreate', options);
+            },
+            afterCreate: function () {
+                console.log('afterCreate');
+            },
+            beforeMount: function () {
+                console.log('beforeMount');
+            },
+            afterMount: function () {
+                console.log('afterMount');
+            },
+            beforeUpdate: function () {
+                console.log('beforeUpdate');
+            },
+            afterUpdate: function () {
+                console.log('afterUpdate');
+            },
+            beforeDestroy: function () {
+                console.log('beforeDestroy');
+            },
+            afterDestroy: function () {
+                console.log('afterDestroy');
+            }
+        });
+
+    </script>
+</body>
+</html>

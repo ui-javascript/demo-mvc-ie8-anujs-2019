@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>简单的观察者</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="app1"></div>
+    <div id="app2"></div>
+
+    <script src="https://unpkg.com/yox"></script>
+    <script>
+
+        var instance1 = new Yox({
+            el: '#app1',
+            template: `
+                <div>
+                    你好
+                    <div>
+                        {{list.length}}
+                    </div>
+                </div>
+            `,
+            data: {
+                list: [1,2,3,4]
+            },
+        });
+
+        var instance2 = new Yox({
+            el: '#app2',
+            data: {
+                message: 'hello'
+            },
+        });
+
+        var instance3 = new Yox({
+            data: {
+                counter: 0
+            },
+            watchers: {
+                counter: function (newValue, oldValue) {
+                    console.log(newValue, oldValue)
+                }
+            }
+        });
+
+    </script>
+</body>
+</html>

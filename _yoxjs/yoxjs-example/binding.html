@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>双向绑定</title>
+    <meta name="viewport" content="initial-scale=1.0,width=device-width,user-scalable=0,maximum-scale=1.0,minimum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta content="email=no" name="format-detection" />
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="full-screen" content="yes">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="browsermode" content="application">
+    <meta name="x5-page-mode" content="app">
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <style>
+        #app {
+            padding: 20px;
+        }
+        .title {
+            font-size: 26px !important;
+            margin-top: 30px !important;
+            margin-bottom: 20px !important;
+        }
+    </style>
+</head>
+<body>
+    <div id="app"></div>
+    <script id="template" type="plain/text">
+
+        <div>
+            <form class="ui form">
+
+
+                <div class="field">
+                    <label class="title">
+                        input 实时同步
+                    </label>
+                </div>
+                <div class="field">
+                    <input type="text" model="title">
+                </div>
+                <div class="ui message">
+                    {{title}}
+                </div>
+
+
+
+
+
+                <div class="field">
+                    <label class="title">
+                        input 延时同步
+                    </label>
+                </div>
+                <div class="field">
+                    <input type="text" model="title" lazy="500">
+                </div>
+                <div class="ui message">
+                    {{title}}
+                </div>
+
+
+
+
+
+                <div class="field">
+                    <label class="title">
+                        input change 同步
+                    </label>
+                </div>
+                <div class="field">
+                    <input type="text" model="title" lazy>
+                </div>
+                <div class="ui message">
+                    {{title}}
+                </div>
+
+
+
+
+                <div class="field">
+                    <label class="title">
+                        textarea 实时同步
+                    </label>
+                </div>
+                <div class="field">
+                    <textarea model="title"></textarea>
+                </div>
+                <div class="ui message">
+                    {{title}}
+                </div>
+
+
+
+
+                <div class="field">
+                    <label class="title">
+                        textarea 延时同步
+                    </label>
+                </div>
+                <div class="field">
+                    <textarea model="title" lazy="500"></textarea>
+                </div>
+                <div class="ui message">
+                    {{title}}
+                </div>
+
+
+
+
+                <div class="field">
+                    <label class="title">
+                        textarea change 同步
+                    </label>
+                </div>
+                <div class="field">
+                    <textarea model="title" lazy></textarea>
+                </div>
+                <div class="ui message">
+                    {{title}}
+                </div>
+
+
+                <div class="field">
+                    <label class="title">
+                        单选框
+                    </label>
+                </div>
+                <div class="grouped fields">
+                    {{#each users}}
+                        <div class="field">
+                            <div class="ui radio checkbox">
+                                <input type="radio" model="selectedUser" value="{{name}}">
+                                <label>
+                                    {{name}}
+                                </label>
+                            </div>
+                        </div>
+                    {{/each}}
+                </div>
+                <div class="ui message">
+                    选中的用户：{{selectedUser}}
+                </div>
+
+
+
+                <div class="field">
+                    <label class="title">
+                        一个复选框
+                    </label>
+                </div>
+                <div class="grouped fields">
+                    <input type="checkbox" model="checkboxSelected">
+                </div>
+                <div class="ui message">
+                    <label>是否选中</label>：{{checkboxSelected ? '是' : '否'}}
+                </div>
+
+
+
+
+
+                <div class="field">
+                    <label class="title">
+                        多个复选框
+                    </label>
+                </div>
+                <div class="grouped fields">
+                    {{#each users}}
+                        <div class="field">
+                            <div class="ui checkbox">
+                                <input type="checkbox" model="selectedNames" value="{{name}}">
+                                <label>
+                                    {{name}}
+                                </label>
+                            </div>
+                        </div>
+                    {{/each}}
+                </div>
+                <div class="ui message">
+                    选中的用户：{{formatSelectedNames(selectedNames)}}
+                </div>
+
+
+
+
+
+                <div class="field">
+                    <label class="title">
+                        single select
+                    </label>
+                </div>
+                <div class="field">
+                    <select class="ui" model="selectedUser">
+                    {{#each users}}
+                        <option>
+                            {{name}}
+                        </option>
+                    {{/each}}
+                    </select>
+                </div>
+                <div class="ui message">
+                    选中的用户：{{selectedUser}}
+                </div>
+
+
+                <div class="field">
+                    <label class="title">
+                        multi select
+                    </label>
+                </div>
+                <div class="field">
+                    <select multiple="multiple" model="selectedNames">
+                    {{#each users}}
+                        <option>
+                            {{name}}
+                        </option>
+                    {{/each}}
+                    </select>
+                </div>
+                <div class="ui message">
+                    选中的用户：{{formatSelectedNames(selectedNames)}}
+                </div>
+
+            </form>
+
+
+        </div>
+
+    </script>
+
+    <!--[if IE]>
+    <script src="https://cdn.bootcss.com/es6-promise/4.1.1/es6-promise.auto.min.js"></script>
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.13/es5-shim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.13/es5-sham.min.js"></script>
+    <![endif]-->
+
+    <!--[if lt IE 8]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/json3/3.3.2/json3.min.js"></script>
+    <![endif]-->
+
+    <script src="./libs/standard/dev/yox.js"></script>
+    <script>
+
+        var instance = new Yox({
+            el: '#app',
+            template: '#template',
+            data: {
+                title: 'yoxjs',
+                selectedUser: '',
+                checkboxSelected: true,
+
+                selectedNames: [],
+
+                users: [
+                    {
+                        name: 'Jake'
+                    },
+                    {
+                        name: 'John'
+                    },
+                    {
+                        name: 'Mike'
+                    }
+                ]
+            },
+            watchers: {
+                '**': function () {
+                    console.log(arguments);
+                },
+                '*.length': function () {
+                    console.log(arguments);
+                }
+            },
+            filters: {
+                formatSelectedNames: function (selectedNames) {
+                    return '[' + selectedNames.toString() + ']';
+                }
+            },
+            beforeUpdate: function () {
+                console.log('    beforeUpdate');
+            },
+            afterUpdate: function () {
+                console.log('    afterUpdate');
+            }
+        });
+
+    </script>
+</body>
+</html>

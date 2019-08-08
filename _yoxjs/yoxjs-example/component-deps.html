@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>组件数据流</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="app"></div>
+    <script id="template1" type="plain/text">
+      <div id="custom-component">
+          title: {{title}}
+          <br>
+          name: {{user.name}}
+          <br>
+          age: {{user.age}}
+          <button on-click="innerIncrease()">
+              innerIncrease
+          </button>
+      </div>
+    </script>
+    <script id="template2" type="plain/text">
+      <div id="root">
+          {{user.name}}
+          <br>
+          {{user['name']}}
+          <br>
+          {{user[variable]}}
+          <br>
+          {{ user.age > 10 ? title : variable }}
+          <Custom ref="child" title="{{title}}" user="{{user}}" />
+          <ul>
+              {{#each list:index}}
+              <li>
+                  {{name}} - {{user.name}}
+                  <Custom ref="child{{index}}" title="{{user.age}}" user="{{user}}" />
+              </li>
+              {{/each}}
+          </ul>
+      </div>
+    </script>
+    <script src="https://unpkg.com/yox"></script>
+    <script>
+
+        var Custom = {
+            template: '#template1',
+            watchers: {
+              'user.age': function (newValue, oldValue) {
+                console.log('   ', newValue, oldValue)
+              }
+            },
+            methods: {
+                innerIncrease: function () {
+                    this.fire('increase');
+                }
+            },
+            beforeCreate: function (options) {
+                console.log('    beforeCreate', options);
+            },
+            afterCreate: function () {
+                console.log('    afterCreate');
+            },
+            beforeMount: function () {
+                console.log('    beforeMount');
+            },
+            afterMount: function () {
+                console.log('    afterMount');
+            },
+            beforeUpdate: function () {
+                console.log('    beforeUpdate', this);
+            },
+            afterUpdate: function () {
+                console.log('    afterUpdate');
+            },
+            beforeDestroy: function () {
+                console.log('    beforeDestroy');
+            },
+            afterDestroy: function () {
+                console.log('    afterDestroy');
+            }
+        };
+
+        var instance = new Yox({
+            el: '#app',
+            data: {
+                title: 'yox',
+                variable: 'age',
+                user: {
+                    name: 'Jake',
+                    age: 10,
+                    increase: function () {
+                        console.log(this === instance, 'xxx')
+                    }
+                },
+                list: [
+                    {
+                        name: 'h1',
+                    },
+                    {
+                        name: 'h2',
+                    },
+                    {
+                        name: 'h3',
+                    }
+                ]
+            },
+            template: '#template2',
+            components: {
+                Custom: Custom
+            },
+            watchers: {
+                'user.age': function (value) {
+                    console.log('age changed');
+                    this.set('user.name', value - 1);
+                    this.set('user.title', value - 1);
+                },
+                'user.name': function (value) {
+                    console.log('name changed');
+                }
+            },
+            events: {
+                increase: function (e) {
+                    console.log(this === instance, e)
+                    this.increase('user.age')
+                },
+            },
+            beforeUpdate: function () {
+                console.log('before update');
+            },
+            afterUpdate: function () {
+                console.log('after update');
+            }
+        });
+
+    </script>
+</body>
+</html>

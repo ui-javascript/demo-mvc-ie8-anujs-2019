@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>组件双向绑定</title>
+</head>
+<body>
+    <div id="app"></div>
+
+    <script id="template1" type="plain/text">
+        <div>
+            <Input model="name" />
+            {{name}}
+        </div>
+    </script>
+
+    <script id="template2" type="plain/text">
+        <input type="text" model="value">
+    </script>
+
+    <script src="./libs/standard/dev/yox.js"></script>
+    <script>
+
+        var Input = {
+            template: '#template2',
+            propTypes: {
+                value: {
+                    type: 'string',
+                    value: ''
+                }
+            },
+        };
+
+        var instance = new Yox({
+            el: '#app',
+            data: {
+                name: '111',
+            },
+            template: '#template1',
+            components: {
+                Input: Input,
+            }
+        });
+
+    </script>
+</body>
+</html>

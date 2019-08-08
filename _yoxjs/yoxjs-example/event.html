@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="app"></div>
+    <script id="template" type="plain/text">
+
+        <div>
+          <Button
+            on-click="clickMethod()"
+            on-click.namespace="clickNamespaceMethod()"
+            on-submit="submitMethod()"
+            on-submit.namespace="submitNamespaceMethod()"
+          />
+        </div>
+
+    </script>
+
+    <script id="buttonTemplate" type="plain/text">
+
+        <div>
+            <button on-click="click">
+                click
+            </button>
+            <button on-click="click.namespace">
+                click.namespace
+            </button>
+            <button on-click="submit">
+                submit
+            </button>
+            <button on-click="submit.namespace" lazy-click="1000">
+                submit.namespace
+            </button>
+        </div>
+
+    </script>
+
+    <script src="./libs/standard/dev/yox.js"></script>
+    <script>
+
+        var Button = {
+          template: '#buttonTemplate',
+          events: {
+            click: function (event, data) {
+              console.log('button', 'click', event, data)
+            },
+            'click.namespace': function (event, data) {
+              console.log('button', 'click.namespace', event, data)
+            },
+            submit: function (event, data) {
+              console.log('button', 'submit', event, data)
+            },
+            'submit.namespace': function (event, data) {
+              console.log('button', 'submit.namespace', event, data)
+            }
+          }
+        }
+
+
+        var instance = new Yox({
+            el: '#app',
+            template: '#template',
+            data: {},
+            components: {
+              Button: Button,
+            },
+            events: {
+              click: function (event, data) {
+                console.log('root', 'click', event, data)
+              },
+              'click.namespace': function (event, data) {
+                console.log('root', 'click.namespace', event, data)
+              },
+              submit: function (event, data) {
+                console.log('root', 'submit', event, data)
+              },
+              'submit.namespace': function (event, data) {
+                console.log('root', 'submit.namespace', event, data)
+              }
+            },
+            methods: {
+              clickMethod: function (event, data) {
+                console.log('root', 'clickMethod', event, data)
+              },
+              clickNamespaceMethod: function (event, data) {
+                console.log('root', 'clickNamespaceMethod', event, data)
+              },
+              submitMethod: function (event, data) {
+                console.log('root', 'submitMethod', event, data)
+              },
+              submitNamespaceMethod: function (event, data) {
+                console.log('root', 'submitNamespaceMethod', event, data)
+              }
+            },
+            afterMount: function () {
+              this.once('click', function (event) {
+                console.log(event)
+              })
+            }
+        });
+
+    </script>
+</body>
+</html>

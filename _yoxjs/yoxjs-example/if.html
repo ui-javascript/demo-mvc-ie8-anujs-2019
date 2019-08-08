@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Keypath</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="app"></div>
+    <script id="template" type="plain/text">
+
+        <div>
+            <div class="test{{#if a}} a{{/if}}{{#if b}} b{{/if}}{{#if c}} c{{/if}}">
+                <span>--</span>
+                {{#if a}}
+                    a
+                {{/if}}
+                <span>--</span>
+                {{#if b}}
+                    b
+                {{else if c}}
+                    c
+                {{/if}}
+                <span>--</span>
+                {{#if e}}
+                    e
+                {{/if}}
+            </div>
+        </div>
+
+    </script>
+    <script src="https://unpkg.com/yox"></script>
+    <script>
+        var instance = new Yox({
+            el: '#app',
+            template: '#template',
+            data: {
+                a: true,
+                b: false,
+                c: false,
+                e: false
+            }
+        });
+
+    </script>
+</body>
+</html>

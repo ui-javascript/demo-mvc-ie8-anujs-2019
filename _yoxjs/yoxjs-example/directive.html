@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>指令</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="app"></div>
+    <script id="template" type="plain/text">
+
+        <div>
+            <button o-click="{name: name }">
+                33
+            </button>
+        </div>
+
+    </script>
+    <script src="./libs/standard/dev/yox.js"></script>
+    <script>
+        var instance = new Yox({
+            el: '#app',
+            template: '#template',
+            data: {
+                name: 'yox',
+                disabled: true
+            },
+            directives: {
+                click: {
+                  bind: function (node, directive, vnode) {
+                    console.log('click', node, directive, vnode);
+                  }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

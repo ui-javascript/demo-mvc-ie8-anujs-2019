@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo</title>
+</head>
+<body>
+    <div id="app"></div>
+    <script id="template" type="plain/text">
+      <div id="root">
+
+          {{#if open}}
+              <div>
+                  <div on-click="close()">
+                      close
+                  </div>
+              </div>
+          {{/if}}
+          <div on-click="open()">
+              open
+          </div>
+      </div>
+    </script>
+    <script src="./libs/standard/dev/yox.js"></script>
+    <script>
+
+        var Child = {
+          data: function () {
+            return {
+              open: false,
+            }
+          },
+          template: '#template',
+          watchers: {
+            open: function (newValue, oldValue) {
+                console.log(newValue, oldValue)
+            }
+          },
+
+          methods: {
+              open: function () {
+                  this.set('open', true)
+              },
+              close: function () {
+                  this.set('open', false)
+              }
+          },
+
+          beforeUpdate: function () {
+              console.log('    beforeUpdate');
+          },
+          afterUpdate: function () {
+              console.log('    afterUpdate');
+          },
+          beforeDestroy: function () {
+              console.log('    beforeDestroy');
+          },
+          afterDestroy: function () {
+              console.log('    afterDestroy');
+          }
+        };
+
+        var instance = new Yox({
+            el: '#app',
+            template: '<Child />',
+            components: {
+              Child: Child
+            }
+        });
+
+    </script>
+</body>
+</html>

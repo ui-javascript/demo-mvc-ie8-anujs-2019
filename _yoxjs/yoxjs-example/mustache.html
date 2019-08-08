@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo</title>
+</head>
+<body>
+    <div id="app"></div>
+    <textarea id="template">
+
+    <div>
+        <h4>
+            简单插值
+        </h4>
+
+        <div>
+          {{name1}}
+        </div>
+
+        <h4>
+            二元表达式插值
+        </h4>
+
+        <div>
+          {{name1 + name2 + name3}}
+        </div>
+
+        <h4>
+            连续插值
+        </h4>
+
+        <div>
+            12-{{name1}}-{{name2}}-{{name3}}-{{name4}}-{{name5}}-34-{{user.name}}
+        </div>
+
+        <h4>
+            复杂计算
+        </h4>
+
+        <div>
+          {{a * (b + c) - d * b}} = -3
+        </div>
+
+        <p
+            class="
+                heihei
+                {{#if name1}}abc{{/if}}
+                {{#if name2}} def{{/if}}
+            "
+            data-name-haha1="{{#if name1}}1{{else}}0{{/if}}"
+            data-name-haha2="{{#if name1}}1{{else}}0{{/if}}"
+            data-name-haha3="{{#if name1}}1{{else}}0{{/if}}"
+        >
+            {{{title}}}
+        </p>
+
+        <p id="id"class="class"title="title">
+          连续属性，在模板打包时可能出现一行的情况
+        </p>
+
+        <p{{#if a}}id="id"{{/if}}>
+          标签名紧跟判断
+        </p>
+
+        <p>
+            {{filterUsers.length}}
+        </p>
+
+        <h1>
+            数组下标访问
+        </h1>
+
+        <p>
+            {{users.0.name}}
+        </p>
+
+        <h1>
+            子闭合标签
+        </h1>
+
+        <div>
+            <input type="checkbox" disabled="{{disabled1}}"> disabled
+            <input type="checkbox" disabled="{{disabled2}}"> enabled
+            <input type="checkbox" disabled="{{disabled3}}"> enabled
+            <input type="checkbox" disabled="disabled"> disabled
+            <input type="checkbox" disabled="abc"> enabled
+            <input type="checkbox" disabled> disabled
+            <input type="checkbox" aaa> aaa
+            <input type="checkbox" readonly> readonly
+        </div>
+
+        <div>
+            <div>
+              <input type="text">
+            </div>
+            <div>
+              <input type="text">text
+            </div>
+            <div>
+              <input type="text">
+              <span>text</span>
+            </div>
+
+            <div>
+              <input type="text" />
+            </div>
+            <div>
+              <input type="text" />text
+            </div>
+            <div>
+              <input type="text" />
+              <span>text</span>
+            </div>
+
+            <video controls>
+              <source src="//vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+              <source src="//vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+            </video>
+        </div>
+
+
+        <h1>
+            循环数组
+        </h1>
+
+        <p>
+            {{#each ['11', '111', '1111']:index}}
+                <div>
+                    {{index}} -> {{this}} -> {{this.length}}
+                </div>
+            {{/each}}
+        </p>
+
+        <p>
+            {{#each 5 -> 10:index}}
+                <div>
+                    {{index}} -> {{this}}
+                </div>
+            {{/each}}
+        </p>
+
+        <p>
+            {{#each 10 => 5:index}}
+                <div>
+                    {{index}} -> {{this}}
+                </div>
+            {{/each}}
+        </p>
+
+        <p>
+
+            {{#each users:index}}
+                <div key="{{index}}" class="wrapper" data-id="{{id}}">
+                    {{name}}-{{age}}
+                    {{#if index < users.length - 1}}
+                        -
+                    {{/if}}
+                </div>
+            {{/each}}
+        </p>
+
+        <p>
+            {{#each users:index}}
+                {{this.name}}
+                {{#if index < users.length - 1}}
+                    -
+                {{/if}}
+            {{/each}}
+        </p>
+
+        <p>
+            {{#each user:key}}
+                [{{key}}: "{{this}}"]
+                {{$keypath}}
+                <br>
+            {{/each}}
+        </p>
+
+        <h1>
+            循环对象
+        </h1>
+
+        <p>
+            {{#each users:index}}
+                {{#each this:key}}
+                    <div>
+                        {{index}}-{{key}}: {{this}}
+                    </div>
+                {{/each}}
+            {{/each}}
+        </p>
+
+        <h1>
+            子模板
+        </h1>
+
+        {{#partial hello}}
+            hi, {{user.name}}.
+        {{/partial}}
+
+        <p>
+            {{> hello}}
+        </p>
+
+        <p>
+            1{{> bye}}
+        </p>
+        <p>
+            2{{> greet}}
+        </p>
+
+        <h1>
+            过滤器
+        </h1>
+
+        <p>
+            {{formatDate(today)}}
+        </p>
+
+        <p>
+            {{#if name1}}
+                <span class="{{title}}">
+                    {{title}}
+                </span>
+            {{else}}
+                <h1>123</h1>
+            {{/if}}
+        </p>
+
+
+        {{! 注释一 }}
+
+        {{!
+            注释二
+        }}
+
+        <!-- 注释一 -->
+
+        <!--
+            注释二
+        -->
+
+    </div>
+
+    </textarea>
+    <script src="./libs/standard/dev/yox.js"></script>
+    <script>
+        window.YOX_LOG_LEVEL = Yox.logger.WARN
+        var instance = new Yox({
+            el: '#app',
+            template: Yox.dom.find('#template').value,
+            data: {
+                title: '<strong id="id" class="class">Yox</strong>',
+                disabled1: true,
+                disabled2: false,
+                a: 1,
+                b: 2,
+                c: 3,
+                d: 4,
+                name1: true,
+                name2: null,
+                name3: 0,
+                name4: { },
+                name5: [ 1, 2, 3 ],
+                user: {
+                    name: 'musicode',
+                    age: 10,
+                    title: 'FE Enginer'
+                },
+                users: [
+                    {
+                        id: 0,
+                        name: 'Jake',
+                        age: 10
+                    },
+                    {
+                        id: 1,
+                        name: 'John',
+                        age: 20
+                    },
+                    {
+                        id: 2,
+                        name: 'Mike',
+                        age: 30
+                    }
+                ],
+                today: new Date()
+            },
+            computed: {
+                filterUsers: function () {
+                    var users = this.get('users');
+                    return users.filter(function (user) {
+                        return user.age > 10;
+                    });
+                }
+            },
+            partials: {
+                bye: '<div>bye, {{user.name}}</div>',
+                greet: Yox.compile('<div>hi, {{user.name}}</div>')
+            },
+            filters: {
+                formatDate: function (value) {
+                    return value.getTime();
+                }
+            },
+            beforeUpdate: function () {
+                console.log('beforeUpdate');
+            }
+        });
+
+    </script>
+</body>
+</html>
