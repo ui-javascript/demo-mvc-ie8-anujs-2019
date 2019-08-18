@@ -40,10 +40,12 @@ export default class Modify extends React.PureComponent {
 	}
 
 	onChange(data) {
+		debugger
 		this.data = data;
 	}
 
 	save() {
+		debugger
 		this.data.uid = this.props.data.uid;
 		store.dispatch.todoModel.modify(this.data);
 		this.props.onModify({ ...this.data });

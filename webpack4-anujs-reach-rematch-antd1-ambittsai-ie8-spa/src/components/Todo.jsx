@@ -15,17 +15,17 @@ class Todo extends React.Component {
 		selectedRowKeys: [],
 	};
 	columns = [{
-		title: 'Start Time',
+		title: '开始时间',
 		key: 'startTime',
 		dataIndex: 'startTime',
 		width: 85,
 	}, {
-		title: 'End Time',
+		title: '结束时间',
 		key: 'endTime',
 		dataIndex: 'endTime',
 		width: 85,
 	}, {
-		title: 'Content',
+		title: '内容',
 		key: 'content',
 		dataIndex: 'content',
 	}];
