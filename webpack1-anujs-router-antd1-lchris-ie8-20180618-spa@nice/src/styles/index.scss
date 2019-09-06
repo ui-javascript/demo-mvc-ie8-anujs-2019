@@ -1,0 +1,51 @@
+@import "normalize-5.0.0";
+@import 'iconfont';
+@import 'vars';
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+
+#app {
+  height: 100%;
+}
+
+img {
+  vertical-align: middle;
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+  -webkit-text-fill-color: #333;
+}
+
+
+.view {
+  width: 100%;
+  height: 100%;
+
+  &-head {
+    width: 100%;
+  }
+
+  &-main {
+    width: 100%;
+    height: 100%;
+  }
+
+  &-foot {
+  }
+}
+
+
+.ant-tabs-bar {
+  border-bottom: none;
+}
+
+
+
+
+

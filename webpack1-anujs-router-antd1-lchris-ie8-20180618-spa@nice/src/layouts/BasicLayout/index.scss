@@ -1,0 +1,39 @@
+$head-height: 58px;
+.home {
+  &-head {
+    position: fixed;
+    top: 0;
+    height: $head-height;
+    padding: 4px 36px 4px 10px;
+    z-index: 100;
+
+    &-icon {
+      height: 100%;
+      float: left;
+
+      img {
+        height: 100%;
+        vertical-align: middle;
+        margin-right: 12px;
+      }
+    }
+
+    &-menu {
+      float: right;
+
+      .iconfont {
+        margin-right: 6px;
+        font-size: 20px;
+      }
+
+      &.ant-menu-horizontal {
+        border-bottom: none;
+      }
+    }
+  }
+
+  &-main {
+    padding-top: $head-height;
+  }
+}
+
