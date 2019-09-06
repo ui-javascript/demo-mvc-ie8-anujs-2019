@@ -73,7 +73,9 @@ export default class Conf extends React.PureComponent {
 
 	onChangeContent(event) {
 		const content = event.target.value.trim();
-		if (!content) message.warning('Content should not be empty');
+		if (!content) {
+			message.warning('内容不能为空');
+        }
 		this.setState({ content }, () => this.onChange());
 	}
 }

@@ -8,7 +8,9 @@ export default class Add extends React.PureComponent {
 	state = {
 		visible: false,
 	};
-	data = {};
+	data = {
+
+	};
 
 	render() {
 		return (
@@ -41,6 +43,7 @@ export default class Add extends React.PureComponent {
 
 	save() {
 		store.dispatch.todoModel.add(this.data);
-		message.success('Added successfully');
+		message.success('新增成功');
+		this.close()
 	}
 }

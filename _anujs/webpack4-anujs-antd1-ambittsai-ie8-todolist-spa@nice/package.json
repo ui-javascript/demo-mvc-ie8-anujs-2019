@@ -5,6 +5,7 @@
   "author": "ambit_tsai@qq.com",
   "license": "MIT",
   "scripts": {
+    "install:tyarn": "tyarn install",
     "install:cnpm": "cnpm install",
     "install:yarn": "yarn install",
     "remove": "rimraf node_modules",
