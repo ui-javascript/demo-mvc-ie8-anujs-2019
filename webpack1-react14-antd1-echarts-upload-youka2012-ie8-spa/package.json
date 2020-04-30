@@ -68,7 +68,7 @@
     "es6-promise": "^4.2.5",
     "fetch-ie8": "^1.5.0",
     "html5shiv": "^3.7.3",
-    "jquery": "^1.12.4",
+    "jquery": "^3.5.0",
     "jquery-ui-dist": "^1.12.1",
     "js-cookie": "^2.2.0",
     "media-match": "^2.0.3",
