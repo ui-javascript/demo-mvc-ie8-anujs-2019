@@ -50,7 +50,7 @@
   "dependencies": {
     "antd": "1.11.6",
     "anujs": "^1.4.3",
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "console-polyfill": "^0.3.0",
     "dayjs": "^1.6.5",
     "prop-types": "^15.7.2",
