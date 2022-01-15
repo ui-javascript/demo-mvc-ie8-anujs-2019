@@ -38,7 +38,7 @@
     "rimraf": "^2.6.2",
     "sass-loader": "^7.0.1",
     "sass-resources-loader": "^1.3.3",
-    "shelljs": "^0.8.2",
+    "shelljs": "^0.8.5",
     "style-loader": "^0.19.1",
     "transfer-webpack-plugin": "^0.1.4",
     "url-loader": "^0.6.2",
