@@ -31,7 +31,7 @@
   },
   "devDependencies": {
     "@babel/cli": "7.0.0-beta.40",
-    "@babel/core": "7.0.0-beta.40",
+    "@babel/core": "7.20.12",
     "@babel/node": "7.0.0-beta.40",
     "@babel/plugin-proposal-class-properties": "7.0.0-beta.40",
     "@babel/plugin-syntax-dynamic-import": "7.0.0-beta.40",
@@ -57,7 +57,7 @@
     "eslint-plugin-standard": "3.0.1",
     "extract-text-webpack-plugin": "3.0.2",
     "file-loader": "1.1.6",
-    "html-webpack-plugin": "3.0.4",
+    "html-webpack-plugin": "5.5.0",
     "husky": "0.14.3",
     "json-loader": "0.5.7",
     "lint-staged": "7.0.0",
@@ -80,7 +80,7 @@
     "typescript": "2.6.2",
     "uglifyjs-webpack-plugin": "1.2.2",
     "url-loader": "0.6.2",
-    "webpack": "3.10.0",
+    "webpack": "5.75.0",
     "webpack-dev-middleware": "2.0.4",
     "webpack-dev-server": "2.10.0",
     "webpack-merge": "4.1.1"
